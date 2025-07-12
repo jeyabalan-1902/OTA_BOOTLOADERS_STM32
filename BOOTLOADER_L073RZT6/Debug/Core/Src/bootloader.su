@@ -1,0 +1,15 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:983:34:__NVIC_SystemReset	8	static,ignoring_inline_asm
+../Core/Src/bootloader.c:13:7:bootloader_uart_read_data	16	static
+../Core/Src/bootloader.c:45:6:bootloader_jump_to_user_app	56	static,ignoring_inline_asm
+../Core/Src/bootloader.c:83:6:bootloader_go_reset_cmd	24	static
+../Core/Src/bootloader.c:100:6:bootloader_handle_getcid_cmd	32	static
+../Core/Src/bootloader.c:121:6:bootloader_handle_flash_erase_cmd	40	static
+../Core/Src/bootloader.c:145:6:bootloader_handle_mem_write_cmd	40	static
+../Core/Src/bootloader.c:194:7:bootloader_send_ack	24	static
+../Core/Src/bootloader.c:205:7:bootloader_send_nack	16	static
+../Core/Src/bootloader.c:212:10:bootloader_verify_crc	40	static
+../Core/Src/bootloader.c:227:7:bootloader_uart_write_data	16	static
+../Core/Src/bootloader.c:234:11:get_mcu_chip_id	16	static
+../Core/Src/bootloader.c:242:10:verify_address	16	static
+../Core/Src/bootloader.c:252:10:execute_flash_erase	56	static
+../Core/Src/bootloader.c:274:10:execute_mem_write	48	static
