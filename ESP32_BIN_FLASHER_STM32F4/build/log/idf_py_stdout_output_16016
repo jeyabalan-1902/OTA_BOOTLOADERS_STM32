@@ -1,0 +1,170 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb5ch (711516) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb84 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App version:      1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  98d6ca6e8...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (621) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (761) wifi:mode : sta (f4:65:0b:54:5f:6c)[0m
+[0;32mI (761) wifi:enable tsf[0m
+[0;32mI (771) WIFI_HANDLER: wifi_init_sta finished.[0m
+[0;32mI (781) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (781) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (791) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (801) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (821) wifi:connected with Rnd, aid = 5, channel 6, BW20, bssid = 3c:64:cf:a6:cf:96[0m
+[0;32mI (831) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (831) wifi:pm start, type: 1[0m
+
+[0;32mI (831) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (891) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1861) esp_netif_handlers: sta ip: 192.168.1.97, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1861) WIFI_HANDLER: got ip:192.168.1.97[0m
+[0;32mI (5771) MQTT_HANDLER: Other event id:7[0m
+[0;32mI (5771) OTA_UPDATE: MQTT client started[0m
+[0;32mI (5771) OTA_UPDATE: System ready. Waiting for firmware update requests...[0m
+[0;32mI (5771) main_task: Returned from app_main()[0m
+[0;32mI (5781) wifi:<ba-add>idx:0 (ifx:0, 3c:64:cf:a6:cf:96), tid:0, ssn:0, winSize:64[0m
+[0;32mI (7301) MQTT_HANDLER: MQTT_SERVER_CONNECTED[0m
+[0;32mI (7361) MQTT_HANDLER: MQTT_EVENT_SUBSCRIBED, msg_id=41905[0m
+[0;32mI (7421) MQTT_HANDLER: MQTT_EVENT_SUBSCRIBED, msg_id=12947[0m
+[0;32mI (7421) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=58822[0m
+����������������������������������������������������������������ENT_DATA
+[0;32mI (681071) MQTT_HANDLER: TOPIC=onwords/stm32f/firmware[0m
+[0;32mI (681071) MQTT_HANDLER: DATA={"firmware_sts": 1, "firmwareUrl": "http://13.127.193.192/ota/files/4LTC/EDIO_REC_TOOL_20250626_105459.bin/"}[0m
+[0;32mI (681081) MQTT_HANDLER: Firmware update requested: http://13.127.193.192/ota/files/4LTC/EDIO_REC_TOOL_20250626_105459.bin/[0m
+[0;32mI (681771) OTA_UPDATE: Processing firmware update request[0m
+[0;32mI (681771) OTA_UPDATE: Starting STM32 firmware update process[0m
+[0;32mI (681771) HTTP_HANDLER: Downloading firmware from: http://13.127.193.192/ota/files/4LTC/EDIO_REC_TOOL_20250626_105459.bin/[0m
+[0;32mI (681831) HTTP_HANDLER: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (681831) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16779[0m
+[0;32mI (681891) HTTP_HANDLER: Firmware size: 20988 bytes[0m
+[0;32mI (681891) HTTP_HANDLER: Allocated download buffer: 20988 bytes for 20988 byte firmware[0m
+[0;32mI (682071) HTTP_HANDLER: HTTP download completed. Total bytes: 20988/20988[0m
+[0;32mI (682071) HTTP_HANDLER: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (682071) HTTP_HANDLER: Firmware download completed successfully. Size: 20988 bytes[0m
+[0;32mI (682081) FLASH_CMD: Starting STM32 firmware flashing[0m
+[0;32mI (682081) FLASH_CMD: Step 1: Sending sync commands[0m
+[0;32mI (682081) FLASH_CMD: Sending sync command (0x50) twice with 1000ms interval[0m
+[0;32mI (682101) FLASH_CMD: Sending sync command 1/2[0m
+[0;32mI (682151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=41121[0m
+[0;32mI (682191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=48370[0m
+[0;32mI (682201) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=2439[0m
+[0;32mI (683101) FLASH_CMD: Sending sync command 2/2[0m
+[0;32mI (684601) FLASH_CMD: Step 2: Checking bootloader version[0m
+[0;32mI (684601) FLASH_CMD: Command ==> BL_GET_CID[0m
+[0;32mI (684621) UART_CONFIG: CRC: SUCCESS Len: 2[0m
+[0;32mI (684631) FLASH_CMD: Chip ID: 0x21[0m
+[0;32mI (684631) FLASH_CMD: Step 3: Erasing flash sectors[0m
+[0;32mI (684631) FLASH_CMD: Command ==> BL_FLASH_ERASE[0m
+[0;32mI (684651) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (684671) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=33924[0m
+[0;32mI (684721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=60563[0m
+[0;32mI (684721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9144[0m
+[0;32mI (684721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=42268[0m
+[0;32mI (685621) FLASH_CMD: Erase Status: Success Code: Flash_HAL_OK[0m
+[0;32mI (685631) FLASH_CMD: Step 4: Writing firmware data (20988 bytes)[0m
+[0;32mI (685631) FLASH_CMD: base mem address = 0x08008000[0m
+[0;32mI (685631) FLASH_CMD: bytes_so_far_sent:0 -- bytes_remaining:20988[0m
+[0;32mI (685671) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=25424[0m
+[0;32mI (685721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=59384[0m
+[0;32mI (685751) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (685761) FLASH_CMD: Flash progress: 128/20988 bytes (0.6%)[0m
+[0;32mI (685761) FLASH_CMD: base mem address = 0x08008080[0m
+[0;32mI (685761) FLASH_CMD: bytes_so_far_sent:128 -- bytes_remaining:20860[0m
+[0;32mI (685791) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50445[0m
+[1;31mE (690881) UART_CONFIG: Failed to read ACK+length: got 0 bytes[0m
+[0;33mW (690881) FLASH_CMD: Write failed, retrying (1/3)...[0m
+[0;32mI (691081) FLASH_CMD: base mem address = 0x08008080[0m
+[0;32mI (691081) FLASH_CMD: bytes_so_far_sent:128 -- bytes_remaining:20860[0m
+[1;31mE (696201) UART_CONFIG: Failed to read ACK+length: got 0 bytes[0m
+[0;33mW (696201) FLASH_CMD: Write failed, retrying (2/3)...[0m
+[0;32mI (696401) FLASH_CMD: base mem address = 0x08008080[0m
+[0;32mI (696401) FLASH_CMD: bytes_so_far_sent:128 -- bytes_remaining:20860[0m
+[1;31mE (701521) UART_CONFIG: Failed to read ACK+length: got 0 bytes[0m
+[0;33mW (701521) FLASH_CMD: Write failed, retrying (3/3)...[0m
+[0;32mI (701721) FLASH_CMD: base mem address = 0x08008080[0m
+[0;32mI (701721) FLASH_CMD: bytes_so_far_sent:128 -- bytes_remaining:20860[0m
+[1;31mE (706841) UART_CONFIG: Failed to read ACK+length: got 0 bytes[0m
+[1;31mE (706841) FLASH_CMD: Failed to write chunk after 3 retries[0m
+[1;31mE (706841) OTA_UPDATE: Firmware update failed[0m
+[0;32mI (707301) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=31378[0m
+[0;32mI (707351) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=24259[0m

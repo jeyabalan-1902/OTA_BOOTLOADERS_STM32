@@ -1,0 +1,1009 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb48 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App version:      1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  e49d0ad41...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (731) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (811) wifi:mode : sta (f4:65:0b:54:5f:6c)[0m
+[0;32mI (811) wifi:enable tsf[0m
+[0;32mI (811) WIFI_HANDLER: wifi_init_sta finished.[0m
+[0;32mI (831) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (831) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2001) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2021) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2081) wifi:connected with test, aid = 1, channel 1, BW20, bssid = d6:8b:25:04:59:eb[0m
+[0;32mI (2081) wifi:security: WPA3-SAE, phy: bgn, rssi: -65[0m
+[0;32mI (2131) wifi:pm start, type: 1[0m
+
+[0;32mI (2131) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2131) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2141) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2171) wifi:<ba-add>idx:0 (ifx:0, d6:8b:25:04:59:eb), tid:0, ssn:0, winSize:64[0m
+[0;32mI (3191) esp_netif_handlers: sta ip: 192.168.80.131, mask: 255.255.255.0, gw: 192.168.80.94[0m
+[0;32mI (3191) WIFI_HANDLER: got ip:192.168.80.131[0m
+[0;32mI (5821) MQTT_HANDLER: Other event id:7[0m
+[0;32mI (5821) OTA_UPDATE: MQTT client started[0m
+[0;32mI (5831) OTA_UPDATE: System ready. Waiting for firmware update requests...[0m
+[0;32mI (5831) main_task: Returned from app_main()[0m
+[1;31mE (15831) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (15831) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (15831) mqtt_client: Error transport connect[0m
+[0;32mI (15831) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (15831) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (25841) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (35851) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (35851) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (35851) mqtt_client: Error transport connect[0m
+[0;32mI (35851) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (35851) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (45861) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (55871) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (55871) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (55871) mqtt_client: Error transport connect[0m
+[0;32mI (55871) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (55871) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (65881) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (75891) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (75891) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (75891) mqtt_client: Error transport connect[0m
+[0;32mI (75891) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (75891) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (79751) wifi:state: run -> init (0x1a0)[0m
+[0;32mI (79761) wifi:pm stop, total sleep time: 67219257 us / 77622998 us[0m
+
+[0;32mI (79761) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (79761) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (79771) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (79771) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (79781) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (79791) wifi:state: auth -> init (0x3a0)[0m
+[0;32mI (79791) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (79791) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (82211) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (84621) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (85901) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (85901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (85901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (85901) mqtt_client: Error transport connect[0m
+[0;32mI (85901) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (85911) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (87041) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (89461) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (91871) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (94291) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (96701) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (99121) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (100911) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (100911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (100911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (100911) mqtt_client: Error transport connect[0m
+[0;32mI (100911) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (100921) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (101531) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (103951) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (106361) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (108781) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (111191) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (113611) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (115921) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (115921) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (115921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (115921) mqtt_client: Error transport connect[0m
+[0;32mI (115921) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (115931) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (116021) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (118441) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (120851) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (123271) WIFI_HANDLER: retry to connect to the AP[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x0qJ�:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb48 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App versiosqP@   1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  e49d0ad41...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (561)main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_REST),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 pp0p�p0p@pppp10pp[0m
+� (xpi`���tz` 3 f�c�o�y          fact��y app      00 00 00010000 00100000
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb48 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App version:      1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  e49d0ad41...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+)=: Brownout detector was triggered
+
+
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (60) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (60) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (60) boot: Multicore bootloader[0m
+[0;32mI (63) boot: chip revision: v3.1[0m
+[0;32mI (66) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (69) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (73) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (76) boot: Enabling RNG early entropy source...[0m
+[0;32mI (81) boot: Partition Table:[0m
+[0;32mI (83) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (90) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (96) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (103) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (109) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (116) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (123) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (129) boot: End of partition table[0m
+[0;32mI (133) boot: Defaulting to factory image[0m
+[0;32mI (136) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (193) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (203) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (219) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+[0;32mI (462) esp_image: segment 5: paddr=000edb48 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Multicore app[0m
+[0;32mI (517) cpu_start: Pro cpu start user code[0m
+[0;32mI (517) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (517) app_init: Application information:[0m
+[0;32mI (517) app_init: Project name:     ota_update[0m
+[0;32mI (521) app_init: App version:      1[0m
+[0;32mI (525) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (530) app_init: ELF file SHA256:  e49d0ad41...[0m
+[0;32mI (534) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (539) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (542) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (546) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (550) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (557) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (562) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (567) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (572) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (578) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (585) spi_flash: detected chip: generic[0m
+[0;32mI (587) spi_flash: flash io: dio[0m
+[0;32mI (591) main_task: Started on CPU0[0m
+[0;32mI (601) main_task: Calling app_main()[0m
+[0;32mI (601) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (621) OTA_UPDATE: UART initialized[0m
+[0;32mI (631) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (661) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (671) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (681) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (691) wifi_init: tcp mbox: 6[0m
+[0;32mI (691) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (701) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (801) wifi:mode : sta (f4:65:0b:54:5f:6c)[0m
+[0;32mI (801) wifi:enable tsf[0m
+[0;32mI (801) WIFI_HANDLER: wifi_init_sta finished.[0m
+[0;32mI (3221) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (5641) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (5801) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (5801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5801) mqtt_client: Error transport connect[0m
+[0;32mI (5811) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (5811) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5811) OTA_UPDATE: MQTT client started[0m
+[0;32mI (5821) OTA_UPDATE: System ready. Waiting for firmware update requests...[0m
+[0;32mI (5821) main_task: Returned from app_main()[0m
+[0;32mI (8051) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (10471) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (12881) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (15301) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (17711) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (20131) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (20811) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (20811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20811) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20811) mqtt_client: Error transport connect[0m
+[0;32mI (20811) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (20821) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (22551) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (24961) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (27381) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (29791) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (32211) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (34621) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (35821) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (35821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (35821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35821) mqtt_client: Error transport connect[0m
+[0;32mI (35821) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (35831) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (37041) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (39451) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (41871) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (44281) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (46701) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (49111) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (50831) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (50831) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (50831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (50831) mqtt_client: Error transport connect[0m
+[0;32mI (50831) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (50841) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (51531) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (53951) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (56361) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (58781) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (61191) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (63611) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (65841) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (65841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (65841) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (65841) mqtt_client: Error transport connect[0m
+[0;32mI (65841) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (65851) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (66021) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (68441) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (70851) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (73271) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (75681) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (78101) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (80511) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (80851) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (80851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (80851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (80851) mqtt_client: Error transport connect[0m
+[0;32mI (80851) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (80861) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (82931) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (85341) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (87761) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (90171) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (92591) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (95011) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (95861) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (95861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (95861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (95861) mqtt_client: Error transport connect[0m
+[0;32mI (95861) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (95871) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (97421) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (99841) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (102251) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (104671) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (107081) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (109501) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (110871) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (110871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (110871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (110871) mqtt_client: Error transport connect[0m
+[0;32mI (110871) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (110881) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (111911) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (114331) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (116741) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (119161) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (121571) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (123991) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (125881) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (125881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (125881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (125881) mqtt_client: Error transport connect[0m
+[0;32mI (125881) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (125891) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (126411) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (128821) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (131241) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (133651) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (136071) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (138481) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (140891) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (140891) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (140891) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (140891) mqtt_client: Error transport connect[0m
+[0;32mI (140901) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (140901) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (140901) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (143311) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (145731) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (148141) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (150561) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (152971) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (155391) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (155901) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (155901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (155901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (155901) mqtt_client: Error transport connect[0m
+[0;32mI (155901) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (155911) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (157811) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (160221) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (162641) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (165051) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (167471) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (169881) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (170911) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (170911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (170911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (170911) mqtt_client: Error transport connect[0m
+[0;32mI (170911) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (170921) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (172301) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (174711) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (177131) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (179541) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (181961) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (184371) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (185921) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (185921) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (185921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (185921) mqtt_client: Error transport connect[0m
+[0;32mI (185921) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (185931) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (186791) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (189201) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (191621) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (194041) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (196451) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (198871) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (200931) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (200931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (200931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (200931) mqtt_client: Error transport connect[0m
+[0;32mI (200931) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (200941) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (201281) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (203701) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (206111) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (208531) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (210941) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (213361) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (215771) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (215941) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (215941) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (215941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (215941) mqtt_client: Error transport connect[0m
+[0;32mI (215941) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (215951) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (218191) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (220601) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (223021) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (225441) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (227851) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (230271) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (230951) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (230951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (230951) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (230951) mqtt_client: Error transport connect[0m
+[0;32mI (230951) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (230961) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (232681) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (235101) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (237511) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (239931) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (242341) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (244761) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (245961) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (245961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (245961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (245961) mqtt_client: Error transport connect[0m
+[0;32mI (245961) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (245971) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (247171) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (249591) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (252001) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (254421) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (256841) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (259251) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (260971) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (260971) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (260971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (260971) mqtt_client: Error transport connect[0m
+[0;32mI (260971) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (260981) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (261671) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (264081) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (266501) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (268911) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (271331) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (273741) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (275981) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (275981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (275981) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (275981) mqtt_client: Error transport connect[0m
+[0;32mI (275981) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (275991) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (276161) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (278571) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (280991) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (283401) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (285821) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (288231) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (290651) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (290991) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (290991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (290991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (290991) mqtt_client: Error transport connect[0m
+[0;32mI (290991) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (291001) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (293071) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (295481) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (297901) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (300311) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (302731) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (305141) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (306001) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (306001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (306001) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (306001) mqtt_client: Error transport connect[0m
+[0;32mI (306001) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (306011) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (307561) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (309971) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (312391) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (314801) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (317221) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (319631) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (321011) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (321011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (321011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (321011) mqtt_client: Error transport connect[0m
+[0;32mI (321011) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (321021) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (322051) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (324461) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (326881) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (329291) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (331711) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (334121) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (336021) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (336021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (336021) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (336021) mqtt_client: Error transport connect[0m
+[0;32mI (336021) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (336031) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (336541) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (338951) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (341371) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (343781) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (346201) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (348611) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (351031) MQTT_HANDLER: Other event id:7[0m
+[0;32mI (351031) WIFI_HANDLER: retry to connect to the AP[0m
+[1;31mE (351031) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (351031) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (351041) mqtt_client: Error transport connect[0m
+[0;32mI (351041) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (351051) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (353441) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (355861) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (358271) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (360691) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (363101) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (365521) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (366051) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (366051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (366051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (366051) mqtt_client: Error transport connect[0m
+[0;32mI (366051) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (366061) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (367941) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (370351) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (372771) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (375181) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (377601) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (380011) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (381061) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (381061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (381061) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (381061) mqtt_client: Error transport connect[0m
+[0;32mI (381061) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (381071) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (382431) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (384841) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (387261) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (389671) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (392091) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (394501) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (396071) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (396071) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (396071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (396071) mqtt_client: Error transport connect[0m
+[0;32mI (396071) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (396081) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (396921) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (399341) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (401751) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (404171) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (406581) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (409001) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (411081) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (411081) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (411081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (411081) mqtt_client: Error transport connect[0m
+[0;32mI (411081) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (411091) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (411411) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (413831) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (416241) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (418661) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (421071) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (423491) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (425901) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (426091) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (426091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (426091) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (426091) mqtt_client: Error transport connect[0m
+[0;32mI (426091) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (426101) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (428321) WIFI_HANDLER: retry to connect to the AP[0m
+I BOD: Brownout detector was triggered
+
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb20h (711456) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb48 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App version:      1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  e49d0ad41...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (781) wifi:mode : sta (f4:65:0b:54:5f:6c)[0m
+[0;32mI (781) wifi:enable tsf[0m
+[0;32mI (781) WIFI_HANDLER: wifi_init_sta finished.[0m
+[0;32mI (3201) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (5621) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (5781) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (5781) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5781) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5781) mqtt_client: Error transport connect[0m
+[0;32mI (5791) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (5791) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5791) OTA_UPDATE: MQTT client started[0m
+[0;32mI (5801) OTA_UPDATE: System ready. Waiting for firmware update requests...[0m
+[0;32mI (5801) main_task: Returned from app_main()[0m
+[0;32mI (8031) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (10451) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (12861) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (15281) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (17691) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (20111) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (20791) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (20791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20791) mqtt_client: Error transport connect[0m
+[0;32mI (20791) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (20801) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (22521) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (24941) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (27361) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (29771) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (32191) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (34601) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (35801) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (35801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (35801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35801) mqtt_client: Error transport connect[0m
+[0;32mI (35801) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (35811) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (37021) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (39431) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (41851) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (44261) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (46681) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (49091) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (50811) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (50811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (50811) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (50811) mqtt_client: Error transport connect[0m
+[0;32mI (50811) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (50821) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (51511) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (53921) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (56341) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (58751) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (61171) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (63581) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (65821) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (65821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (65821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (65821) mqtt_client: Error transport connect[0m
+[0;32mI (65821) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (65831) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (66001) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (68411) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (70831) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (73241) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (75661) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (78071) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (80491) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (80831) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (80831) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (80831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (80831) mqtt_client: Error transport connect[0m
+[0;32mI (80831) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (80841) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (82901) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (85321) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (87731) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (90151) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (92561) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (94981) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (95841) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (95841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (95841) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (95841) mqtt_client: Error transport connect[0m
+[0;32mI (95841) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (95851) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (97391) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (99811) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (102221) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (104641) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (107051) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (109471) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (110851) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (110851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (110851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (110851) mqtt_client: Error transport connect[0m
+[0;32mI (110851) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (110861) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (111881) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (114301) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (116711) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (119131) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (121541) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (123961) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (125861) MQTT_HANDLER: Other event id:7[0m
+[1;31mE (125861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (125861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (125861) mqtt_client: Error transport connect[0m
+[0;32mI (125861) MQTT_HANDLER: MQTT_EVENT_ERROR[0m
+[0;32mI (125871) MQTT_HANDLER: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (126371) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (128791) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (131201) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (133621) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (136031) WIFI_HANDLER: retry to connect to the AP[0m
+[0;32mI (138451) WIFI_HANDLER: retry to connect to the AP[0m
