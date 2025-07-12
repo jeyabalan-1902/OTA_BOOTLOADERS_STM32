@@ -1,0 +1,10 @@
+idf_component_register(SRCS "ota_update.c"
+                            "src/crc32.c"
+                            "src/flash_cmd.c"
+                            "src/http.c"
+                            "src/mqtt.c"
+                            "src/uart_config.c"
+                            "src/wifi.c"
+                            "src/update_esp.c"
+                    INCLUDE_DIRS "inc"
+                    EMBED_TXTFILES ${project_dir}/main/server_certs/ca_cert.pem)

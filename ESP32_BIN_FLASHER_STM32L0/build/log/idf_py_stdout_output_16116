@@ -1,0 +1,1144 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 20 2025 15:19:40[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (67) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (73) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (93) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (102) boot: Defaulting to factory image[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d54h (142676) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00032d7c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00032da0 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00036cc8 vaddr=40080000 size=09350h ( 37712) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=adb10h (711440) map[0m
+[0;32mI (432) esp_image: segment 5: paddr=000edb38 vaddr=40089350 size=0f450h ( 62544) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: Pro cpu start user code[0m
+[0;32mI (487) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (487) app_init: Application information:[0m
+[0;32mI (487) app_init: Project name:     ota_update[0m
+[0;32mI (491) app_init: App version:      1[0m
+[0;32mI (495) app_init: Compile time:     Jun 20 2025 15:18:35[0m
+[0;32mI (500) app_init: ELF file SHA256:  fb70e149e...[0m
+[0;32mI (504) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (508) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (512) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (516) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (526) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB88D8 len 00027728 (157 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400987A0 len 00007860 (30 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (571) OTA_UPDATE: STM32 Bootloader with MQTT starting...[0m
+[0;32mI (591) OTA_UPDATE: UART initialized[0m
+[0;32mI (601) wifi:wifi driver task: 3ffc1508, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (611) wifi:config nano formatting: disabled[0m
+[0;32mI (621) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (651) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (661) wifi_init: tcp rx win: 5760[0m
+[0;32mI (661) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (671) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (721) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (801) wifi:mode : sta (f4:65:0b:54:5f:6c)[0m
+[0;32mI (811) wifi:enable tsf[0m
+[0;32mI (811) WIFI_HANDLER: wifi_init_sta finished.[0m
+[0;32mI (1991) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2001) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2001) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2021) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2041) wifi:connected with Rnd, aid = 4, channel 8, BW20, bssid = 3c:64:cf:a6:cf:96[0m
+[0;32mI (2041) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (2061) wifi:pm start, type: 1[0m
+
+[0;32mI (2061) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2091) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3081) esp_netif_handlers: sta ip: 192.168.1.97, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3081) WIFI_HANDLER: got ip:192.168.1.97[0m
+[0;32mI (5811) MQTT_HANDLER: Other event id:7[0m
+[0;32mI (5811) OTA_UPDATE: MQTT client started[0m
+[0;32mI (5811) OTA_UPDATE: System ready. Waiting for firmware update requests...[0m
+[0;32mI (5811) main_task: Returned from app_main()[0m
+[0;32mI (5821) wifi:<ba-add>idx:0 (ifx:0, 3c:64:cf:a6:cf:96), tid:0, ssn:0, winSize:64[0m
+[0;32mI (6351) MQTT_HANDLER: MQTT_SERVER_CONNECTED[0m
+[0;32mI (6421) MQTT_HANDLER: MQTT_EVENT_SUBSCRIBED, msg_id=18819[0m
+[0;32mI (6471) MQTT_HANDLER: MQTT_EVENT_SUBSCRIBED, msg_id=58565[0m
+[0;32mI (6471) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=37358[0m
+[0;32mI (2528421) MQTT_HANDLER: MQTT_EVENT_DATA[0m
+[0;32mI (2528431) MQTT_HANDLER: TOPIC=onwords/stm32/firmware[0m
+[0;32mI (2528431) MQTT_HANDLER: DATA={"firmware_sts": 1, "firmwareUrl": "http://13.127.193.192/ota/files/3CHRB/ota_update (2)_20250623_172429.bin/"}[0m
+[0;32mI (2528441) MQTT_HANDLER: Firmware update requested: http://13.127.193.192/ota/files/3CHRB/ota_update (2)_20250623_172429.bin/[0m
+[0;32mI (2528811) OTA_UPDATE: Processing firmware update request[0m
+[0;32mI (2528811) OTA_UPDATE: Starting STM32 firmware update process[0m
+[0;32mI (2528811) HTTP_HANDLER: Downloading firmware from: http://13.127.193.192/ota/files/3CHRB/ota_update (2)_20250623_172429.bin/[0m
+[1;31mE (2528821) HTTP_CLIENT: Error parse url http://13.127.193.192/ota/files/3CHRB/ota_update (2)_20250623_172429.bin/[0m
+[1;31mE (2528831) HTTP_CLIENT: Failed to set URL[0m
+[1;31mE (2528831) HTTP_HANDLER: Failed to initialize HTTP client[0m
+[1;31mE (2528841) OTA_UPDATE: Firmware download failed[0m
+[1;31mE (2528841) OTA_UPDATE: Firmware update failed[0m
+[0;32mI (2528861) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50283[0m
+[0;32mI (2528891) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10953[0m
+[0;32mI (2585051) MQTT_HANDLER: MQTT_EVENT_DATA[0m
+[0;32mI (2585051) MQTT_HANDLER: TOPIC=onwords/stm32/firmware[0m
+[0;32mI (2585051) MQTT_HANDLER: DATA={"firmware_sts": 1, "firmwareUrl": "http://13.127.193.192/ota/files/1HTC/EDIO_REC_TOOL_20250623_152551.bin/"}[0m
+[0;32mI (2585061) MQTT_HANDLER: Firmware update requested: http://13.127.193.192/ota/files/1HTC/EDIO_REC_TOOL_20250623_152551.bin/[0m
+[0;32mI (2585851) OTA_UPDATE: Processing firmware update request[0m
+[0;32mI (2585851) OTA_UPDATE: Starting STM32 firmware update process[0m
+[0;32mI (2585851) HTTP_HANDLER: Downloading firmware from: http://13.127.193.192/ota/files/1HTC/EDIO_REC_TOOL_20250623_152551.bin/[0m
+[0;32mI (2585911) HTTP_HANDLER: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (2585911) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=56231[0m
+[0;32mI (2585961) HTTP_HANDLER: Firmware size: 24900 bytes[0m
+[0;32mI (2585961) HTTP_HANDLER: Allocated download buffer: 24900 bytes for 24900 byte firmware[0m
+[0;32mI (2586141) HTTP_HANDLER: HTTP download completed. Total bytes: 24900/24900[0m
+[0;32mI (2586151) HTTP_HANDLER: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (2586151) HTTP_HANDLER: Firmware download completed successfully. Size: 24900 bytes[0m
+[0;32mI (2586161) FLASH_CMD: Starting STM32 firmware flashing[0m
+[0;32mI (2586161) FLASH_CMD: Step 1: Sending sync commands[0m
+[0;32mI (2586161) FLASH_CMD: Sending sync command (0x50) twice with 1000ms interval[0m
+[0;32mI (2586181) FLASH_CMD: Sending sync command 1/2[0m
+[0;32mI (2586191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9880[0m
+[0;32mI (2586231) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=2178[0m
+[0;32mI (2586231) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16670[0m
+[0;32mI (2587181) FLASH_CMD: Sending sync command 2/2[0m
+[0;32mI (2588681) FLASH_CMD: Step 2: Checking bootloader version[0m
+[0;32mI (2588681) FLASH_CMD: Command ==> BL_GET_VER[0m
+[0;32mI (2588701) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2588711) FLASH_CMD: Bootloader Ver.: 0x10[0m
+[0;32mI (2588711) FLASH_CMD: Step 3: Erasing flash sectors[0m
+[0;32mI (2588711) FLASH_CMD: Command ==> BL_FLASH_ERASE[0m
+[0;32mI (2588731) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2589121) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22135[0m
+[0;32mI (2589161) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=15181[0m
+[0;32mI (2589161) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=58491[0m
+[0;32mI (2589171) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=64052[0m
+[0;32mI (2589711) FLASH_CMD: Erase Status: Success Code: Flash_HAL_OK[0m
+[0;32mI (2589711) FLASH_CMD: Step 4: Writing firmware data (24900 bytes)[0m
+[0;32mI (2589711) FLASH_CMD: base mem address = 0x08008000[0m
+[0;32mI (2589711) FLASH_CMD: bytes_so_far_sent:0 -- bytes_remaining:24900[0m
+[0;32mI (2589751) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43240[0m
+[0;32mI (2589781) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5893[0m
+[0;32mI (2589841) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2589841) FLASH_CMD: Flash progress: 128/24900 bytes (0.5%)[0m
+[0;32mI (2589841) FLASH_CMD: base mem address = 0x08008080[0m
+[0;32mI (2589841) FLASH_CMD: bytes_so_far_sent:128 -- bytes_remaining:24772[0m
+[0;32mI (2589881) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=54712[0m
+[0;32mI (2589971) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2589971) FLASH_CMD: Flash progress: 256/24900 bytes (1.0%)[0m
+[0;32mI (2589971) FLASH_CMD: base mem address = 0x08008100[0m
+[0;32mI (2589971) FLASH_CMD: bytes_so_far_sent:256 -- bytes_remaining:24644[0m
+[0;32mI (2590011) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52465[0m
+[0;32mI (2590101) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590101) FLASH_CMD: Flash progress: 384/24900 bytes (1.5%)[0m
+[0;32mI (2590101) FLASH_CMD: base mem address = 0x08008180[0m
+[0;32mI (2590101) FLASH_CMD: bytes_so_far_sent:384 -- bytes_remaining:24516[0m
+[0;32mI (2590141) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50690[0m
+[0;32mI (2590231) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590231) FLASH_CMD: Flash progress: 512/24900 bytes (2.1%)[0m
+[0;32mI (2590231) FLASH_CMD: base mem address = 0x08008200[0m
+[0;32mI (2590231) FLASH_CMD: bytes_so_far_sent:512 -- bytes_remaining:24388[0m
+[0;32mI (2590271) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50574[0m
+[0;32mI (2590361) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590361) FLASH_CMD: Flash progress: 640/24900 bytes (2.6%)[0m
+[0;32mI (2590361) FLASH_CMD: base mem address = 0x08008280[0m
+[0;32mI (2590361) FLASH_CMD: bytes_so_far_sent:640 -- bytes_remaining:24260[0m
+[0;32mI (2590391) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=59095[0m
+[0;32mI (2590501) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590501) FLASH_CMD: Flash progress: 768/24900 bytes (3.1%)[0m
+[0;32mI (2590501) FLASH_CMD: base mem address = 0x08008300[0m
+[0;32mI (2590501) FLASH_CMD: bytes_so_far_sent:768 -- bytes_remaining:24132[0m
+[0;32mI (2590541) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=38540[0m
+[0;32mI (2590631) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590631) FLASH_CMD: Flash progress: 896/24900 bytes (3.6%)[0m
+[0;32mI (2590631) FLASH_CMD: base mem address = 0x08008380[0m
+[0;32mI (2590631) FLASH_CMD: bytes_so_far_sent:896 -- bytes_remaining:24004[0m
+[0;32mI (2590661) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22504[0m
+[0;32mI (2590761) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590761) FLASH_CMD: Flash progress: 1024/24900 bytes (4.1%)[0m
+[0;32mI (2590761) FLASH_CMD: base mem address = 0x08008400[0m
+[0;32mI (2590761) FLASH_CMD: bytes_so_far_sent:1024 -- bytes_remaining:23876[0m
+[0;32mI (2590801) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=41401[0m
+[0;32mI (2590891) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2590891) FLASH_CMD: Flash progress: 1152/24900 bytes (4.6%)[0m
+[0;32mI (2590891) FLASH_CMD: base mem address = 0x08008480[0m
+[0;32mI (2590891) FLASH_CMD: bytes_so_far_sent:1152 -- bytes_remaining:23748[0m
+[0;32mI (2590931) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=7086[0m
+[0;32mI (2591021) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591021) FLASH_CMD: Flash progress: 1280/24900 bytes (5.1%)[0m
+[0;32mI (2591021) FLASH_CMD: base mem address = 0x08008500[0m
+[0;32mI (2591021) FLASH_CMD: bytes_so_far_sent:1280 -- bytes_remaining:23620[0m
+[0;32mI (2591061) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=53004[0m
+[0;32mI (2591151) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591151) FLASH_CMD: Flash progress: 1408/24900 bytes (5.7%)[0m
+[0;32mI (2591151) FLASH_CMD: base mem address = 0x08008580[0m
+[0;32mI (2591151) FLASH_CMD: bytes_so_far_sent:1408 -- bytes_remaining:23492[0m
+[0;32mI (2591191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=17324[0m
+[0;32mI (2591281) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591281) FLASH_CMD: Flash progress: 1536/24900 bytes (6.2%)[0m
+[0;32mI (2591281) FLASH_CMD: base mem address = 0x08008600[0m
+[0;32mI (2591281) FLASH_CMD: bytes_so_far_sent:1536 -- bytes_remaining:23364[0m
+[0;32mI (2591311) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=3667[0m
+[0;32mI (2591411) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591411) FLASH_CMD: Flash progress: 1664/24900 bytes (6.7%)[0m
+[0;32mI (2591411) FLASH_CMD: base mem address = 0x08008680[0m
+[0;32mI (2591411) FLASH_CMD: bytes_so_far_sent:1664 -- bytes_remaining:23236[0m
+[0;32mI (2591451) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=37650[0m
+[0;32mI (2591541) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591541) FLASH_CMD: Flash progress: 1792/24900 bytes (7.2%)[0m
+[0;32mI (2591541) FLASH_CMD: base mem address = 0x08008700[0m
+[0;32mI (2591541) FLASH_CMD: bytes_so_far_sent:1792 -- bytes_remaining:23108[0m
+[0;32mI (2591571) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=63436[0m
+[0;32mI (2591681) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591681) FLASH_CMD: Flash progress: 1920/24900 bytes (7.7%)[0m
+[0;32mI (2591681) FLASH_CMD: base mem address = 0x08008780[0m
+[0;32mI (2591681) FLASH_CMD: bytes_so_far_sent:1920 -- bytes_remaining:22980[0m
+[0;32mI (2591721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=45425[0m
+[0;32mI (2591811) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591811) FLASH_CMD: Flash progress: 2048/24900 bytes (8.2%)[0m
+[0;32mI (2591811) FLASH_CMD: base mem address = 0x08008800[0m
+[0;32mI (2591811) FLASH_CMD: bytes_so_far_sent:2048 -- bytes_remaining:22852[0m
+[0;32mI (2591851) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=6859[0m
+[0;32mI (2591941) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2591941) FLASH_CMD: Flash progress: 2176/24900 bytes (8.7%)[0m
+[0;32mI (2591941) FLASH_CMD: base mem address = 0x08008880[0m
+[0;32mI (2591941) FLASH_CMD: bytes_so_far_sent:2176 -- bytes_remaining:22724[0m
+[0;32mI (2591981) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=59592[0m
+[0;32mI (2592071) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592071) FLASH_CMD: Flash progress: 2304/24900 bytes (9.3%)[0m
+[0;32mI (2592071) FLASH_CMD: base mem address = 0x08008900[0m
+[0;32mI (2592071) FLASH_CMD: bytes_so_far_sent:2304 -- bytes_remaining:22596[0m
+[0;32mI (2592101) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=55998[0m
+[0;32mI (2592201) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592201) FLASH_CMD: Flash progress: 2432/24900 bytes (9.8%)[0m
+[0;32mI (2592201) FLASH_CMD: base mem address = 0x08008980[0m
+[0;32mI (2592201) FLASH_CMD: bytes_so_far_sent:2432 -- bytes_remaining:22468[0m
+[0;32mI (2592241) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=47769[0m
+[0;32mI (2592331) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592331) FLASH_CMD: Flash progress: 2560/24900 bytes (10.3%)[0m
+[0;32mI (2592331) FLASH_CMD: base mem address = 0x08008a00[0m
+[0;32mI (2592331) FLASH_CMD: bytes_so_far_sent:2560 -- bytes_remaining:22340[0m
+[0;32mI (2592371) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=39281[0m
+[0;32mI (2592461) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592461) FLASH_CMD: Flash progress: 2688/24900 bytes (10.8%)[0m
+[0;32mI (2592461) FLASH_CMD: base mem address = 0x08008a80[0m
+[0;32mI (2592461) FLASH_CMD: bytes_so_far_sent:2688 -- bytes_remaining:22212[0m
+[0;32mI (2592501) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52603[0m
+[0;32mI (2592591) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592591) FLASH_CMD: Flash progress: 2816/24900 bytes (11.3%)[0m
+[0;32mI (2592591) FLASH_CMD: base mem address = 0x08008b00[0m
+[0;32mI (2592591) FLASH_CMD: bytes_so_far_sent:2816 -- bytes_remaining:22084[0m
+[0;32mI (2592631) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=39272[0m
+[0;32mI (2592721) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592721) FLASH_CMD: Flash progress: 2944/24900 bytes (11.8%)[0m
+[0;32mI (2592721) FLASH_CMD: base mem address = 0x08008b80[0m
+[0;32mI (2592721) FLASH_CMD: bytes_so_far_sent:2944 -- bytes_remaining:21956[0m
+[0;32mI (2592761) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=28242[0m
+[0;32mI (2592851) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592851) FLASH_CMD: Flash progress: 3072/24900 bytes (12.3%)[0m
+[0;32mI (2592851) FLASH_CMD: base mem address = 0x08008c00[0m
+[0;32mI (2592851) FLASH_CMD: bytes_so_far_sent:3072 -- bytes_remaining:21828[0m
+[0;32mI (2592891) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=45549[0m
+[0;32mI (2592981) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2592981) FLASH_CMD: Flash progress: 3200/24900 bytes (12.9%)[0m
+[0;32mI (2592981) FLASH_CMD: base mem address = 0x08008c80[0m
+[0;32mI (2592981) FLASH_CMD: bytes_so_far_sent:3200 -- bytes_remaining:21700[0m
+[0;32mI (2593021) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5737[0m
+[0;32mI (2593111) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593111) FLASH_CMD: Flash progress: 3328/24900 bytes (13.4%)[0m
+[0;32mI (2593111) FLASH_CMD: base mem address = 0x08008d00[0m
+[0;32mI (2593111) FLASH_CMD: bytes_so_far_sent:3328 -- bytes_remaining:21572[0m
+[0;32mI (2593151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=39226[0m
+[0;32mI (2593241) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593241) FLASH_CMD: Flash progress: 3456/24900 bytes (13.9%)[0m
+[0;32mI (2593241) FLASH_CMD: base mem address = 0x08008d80[0m
+[0;32mI (2593241) FLASH_CMD: bytes_so_far_sent:3456 -- bytes_remaining:21444[0m
+[0;32mI (2593281) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=49401[0m
+[0;32mI (2593371) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593371) FLASH_CMD: Flash progress: 3584/24900 bytes (14.4%)[0m
+[0;32mI (2593371) FLASH_CMD: base mem address = 0x08008e00[0m
+[0;32mI (2593371) FLASH_CMD: bytes_so_far_sent:3584 -- bytes_remaining:21316[0m
+[0;32mI (2593411) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16971[0m
+[0;32mI (2593501) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593501) FLASH_CMD: Flash progress: 3712/24900 bytes (14.9%)[0m
+[0;32mI (2593501) FLASH_CMD: base mem address = 0x08008e80[0m
+[0;32mI (2593501) FLASH_CMD: bytes_so_far_sent:3712 -- bytes_remaining:21188[0m
+[0;32mI (2593531) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=42873[0m
+[0;32mI (2593631) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593631) FLASH_CMD: Flash progress: 3840/24900 bytes (15.4%)[0m
+[0;32mI (2593631) FLASH_CMD: base mem address = 0x08008f00[0m
+[0;32mI (2593631) FLASH_CMD: bytes_so_far_sent:3840 -- bytes_remaining:21060[0m
+[0;32mI (2593661) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5123[0m
+[0;32mI (2593761) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593761) FLASH_CMD: Flash progress: 3968/24900 bytes (15.9%)[0m
+[0;32mI (2593761) FLASH_CMD: base mem address = 0x08008f80[0m
+[0;32mI (2593761) FLASH_CMD: bytes_so_far_sent:3968 -- bytes_remaining:20932[0m
+[0;32mI (2593801) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22892[0m
+[0;32mI (2593891) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2593891) FLASH_CMD: Flash progress: 4096/24900 bytes (16.4%)[0m
+[0;32mI (2593891) FLASH_CMD: base mem address = 0x08009000[0m
+[0;32mI (2593891) FLASH_CMD: bytes_so_far_sent:4096 -- bytes_remaining:20804[0m
+[0;32mI (2593931) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=27883[0m
+[0;32mI (2594021) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594021) FLASH_CMD: Flash progress: 4224/24900 bytes (17.0%)[0m
+[0;32mI (2594021) FLASH_CMD: base mem address = 0x08009080[0m
+[0;32mI (2594021) FLASH_CMD: bytes_so_far_sent:4224 -- bytes_remaining:20676[0m
+[0;32mI (2594061) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=63135[0m
+[0;32mI (2594151) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594151) FLASH_CMD: Flash progress: 4352/24900 bytes (17.5%)[0m
+[0;32mI (2594151) FLASH_CMD: base mem address = 0x08009100[0m
+[0;32mI (2594151) FLASH_CMD: bytes_so_far_sent:4352 -- bytes_remaining:20548[0m
+[0;32mI (2594191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=49104[0m
+[0;32mI (2594281) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594281) FLASH_CMD: Flash progress: 4480/24900 bytes (18.0%)[0m
+[0;32mI (2594281) FLASH_CMD: base mem address = 0x08009180[0m
+[0;32mI (2594281) FLASH_CMD: bytes_so_far_sent:4480 -- bytes_remaining:20420[0m
+[0;32mI (2594311) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=53852[0m
+[0;32mI (2594411) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594411) FLASH_CMD: Flash progress: 4608/24900 bytes (18.5%)[0m
+[0;32mI (2594411) FLASH_CMD: base mem address = 0x08009200[0m
+[0;32mI (2594411) FLASH_CMD: bytes_so_far_sent:4608 -- bytes_remaining:20292[0m
+[0;32mI (2594451) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34083[0m
+[0;32mI (2594541) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594541) FLASH_CMD: Flash progress: 4736/24900 bytes (19.0%)[0m
+[0;32mI (2594541) FLASH_CMD: base mem address = 0x08009280[0m
+[0;32mI (2594541) FLASH_CMD: bytes_so_far_sent:4736 -- bytes_remaining:20164[0m
+[0;32mI (2594571) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=25824[0m
+[0;32mI (2594681) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594681) FLASH_CMD: Flash progress: 4864/24900 bytes (19.5%)[0m
+[0;32mI (2594681) FLASH_CMD: base mem address = 0x08009300[0m
+[0;32mI (2594681) FLASH_CMD: bytes_so_far_sent:4864 -- bytes_remaining:20036[0m
+[0;32mI (2594721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=28307[0m
+[0;32mI (2594811) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594811) FLASH_CMD: Flash progress: 4992/24900 bytes (20.0%)[0m
+[0;32mI (2594811) FLASH_CMD: base mem address = 0x08009380[0m
+[0;32mI (2594811) FLASH_CMD: bytes_so_far_sent:4992 -- bytes_remaining:19908[0m
+[0;32mI (2594841) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50440[0m
+[0;32mI (2594941) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2594941) FLASH_CMD: Flash progress: 5120/24900 bytes (20.6%)[0m
+[0;32mI (2594941) FLASH_CMD: base mem address = 0x08009400[0m
+[0;32mI (2594941) FLASH_CMD: bytes_so_far_sent:5120 -- bytes_remaining:19780[0m
+[0;32mI (2594981) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=51749[0m
+[0;32mI (2595071) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595071) FLASH_CMD: Flash progress: 5248/24900 bytes (21.1%)[0m
+[0;32mI (2595071) FLASH_CMD: base mem address = 0x08009480[0m
+[0;32mI (2595071) FLASH_CMD: bytes_so_far_sent:5248 -- bytes_remaining:19652[0m
+[0;32mI (2595111) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=30809[0m
+[0;32mI (2595201) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595201) FLASH_CMD: Flash progress: 5376/24900 bytes (21.6%)[0m
+[0;32mI (2595201) FLASH_CMD: base mem address = 0x08009500[0m
+[0;32mI (2595201) FLASH_CMD: bytes_so_far_sent:5376 -- bytes_remaining:19524[0m
+[0;32mI (2595241) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=7660[0m
+[0;32mI (2595331) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595331) FLASH_CMD: Flash progress: 5504/24900 bytes (22.1%)[0m
+[0;32mI (2595331) FLASH_CMD: base mem address = 0x08009580[0m
+[0;32mI (2595331) FLASH_CMD: bytes_so_far_sent:5504 -- bytes_remaining:19396[0m
+[0;32mI (2595371) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=62849[0m
+[0;32mI (2595461) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595461) FLASH_CMD: Flash progress: 5632/24900 bytes (22.6%)[0m
+[0;32mI (2595461) FLASH_CMD: base mem address = 0x08009600[0m
+[0;32mI (2595461) FLASH_CMD: bytes_so_far_sent:5632 -- bytes_remaining:19268[0m
+[0;32mI (2595501) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=54355[0m
+[0;32mI (2595591) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595591) FLASH_CMD: Flash progress: 5760/24900 bytes (23.1%)[0m
+[0;32mI (2595591) FLASH_CMD: base mem address = 0x08009680[0m
+[0;32mI (2595591) FLASH_CMD: bytes_so_far_sent:5760 -- bytes_remaining:19140[0m
+[0;32mI (2595631) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=60376[0m
+[0;32mI (2595721) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595721) FLASH_CMD: Flash progress: 5888/24900 bytes (23.6%)[0m
+[0;32mI (2595721) FLASH_CMD: base mem address = 0x08009700[0m
+[0;32mI (2595721) FLASH_CMD: bytes_so_far_sent:5888 -- bytes_remaining:19012[0m
+[0;32mI (2595761) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10098[0m
+[0;32mI (2595851) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595851) FLASH_CMD: Flash progress: 6016/24900 bytes (24.2%)[0m
+[0;32mI (2595851) FLASH_CMD: base mem address = 0x08009780[0m
+[0;32mI (2595851) FLASH_CMD: bytes_so_far_sent:6016 -- bytes_remaining:18884[0m
+[0;32mI (2595891) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=36424[0m
+[0;32mI (2595981) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2595981) FLASH_CMD: Flash progress: 6144/24900 bytes (24.7%)[0m
+[0;32mI (2595981) FLASH_CMD: base mem address = 0x08009800[0m
+[0;32mI (2595981) FLASH_CMD: bytes_so_far_sent:6144 -- bytes_remaining:18756[0m
+[0;32mI (2596021) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=61237[0m
+[0;32mI (2596111) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596111) FLASH_CMD: Flash progress: 6272/24900 bytes (25.2%)[0m
+[0;32mI (2596111) FLASH_CMD: base mem address = 0x08009880[0m
+[0;32mI (2596111) FLASH_CMD: bytes_so_far_sent:6272 -- bytes_remaining:18628[0m
+[0;32mI (2596151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=35287[0m
+[0;32mI (2596241) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596241) FLASH_CMD: Flash progress: 6400/24900 bytes (25.7%)[0m
+[0;32mI (2596241) FLASH_CMD: base mem address = 0x08009900[0m
+[0;32mI (2596241) FLASH_CMD: bytes_so_far_sent:6400 -- bytes_remaining:18500[0m
+[0;32mI (2596281) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=58646[0m
+[0;32mI (2596371) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596371) FLASH_CMD: Flash progress: 6528/24900 bytes (26.2%)[0m
+[0;32mI (2596371) FLASH_CMD: base mem address = 0x08009980[0m
+[0;32mI (2596371) FLASH_CMD: bytes_so_far_sent:6528 -- bytes_remaining:18372[0m
+[0;32mI (2596411) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=31128[0m
+[0;32mI (2596501) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596501) FLASH_CMD: Flash progress: 6656/24900 bytes (26.7%)[0m
+[0;32mI (2596501) FLASH_CMD: base mem address = 0x08009a00[0m
+[0;32mI (2596501) FLASH_CMD: bytes_so_far_sent:6656 -- bytes_remaining:18244[0m
+[0;32mI (2596531) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=13528[0m
+[0;32mI (2596631) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596631) FLASH_CMD: Flash progress: 6784/24900 bytes (27.2%)[0m
+[0;32mI (2596631) FLASH_CMD: base mem address = 0x08009a80[0m
+[0;32mI (2596631) FLASH_CMD: bytes_so_far_sent:6784 -- bytes_remaining:18116[0m
+[0;32mI (2596671) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=63524[0m
+[0;32mI (2596761) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596761) FLASH_CMD: Flash progress: 6912/24900 bytes (27.8%)[0m
+[0;32mI (2596761) FLASH_CMD: base mem address = 0x08009b00[0m
+[0;32mI (2596761) FLASH_CMD: bytes_so_far_sent:6912 -- bytes_remaining:17988[0m
+[0;32mI (2596791) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=64161[0m
+[0;32mI (2596891) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2596891) FLASH_CMD: Flash progress: 7040/24900 bytes (28.3%)[0m
+[0;32mI (2596891) FLASH_CMD: base mem address = 0x08009b80[0m
+[0;32mI (2596891) FLASH_CMD: bytes_so_far_sent:7040 -- bytes_remaining:17860[0m
+[0;32mI (2596931) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=41059[0m
+[0;32mI (2597021) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597021) FLASH_CMD: Flash progress: 7168/24900 bytes (28.8%)[0m
+[0;32mI (2597021) FLASH_CMD: base mem address = 0x08009c00[0m
+[0;32mI (2597021) FLASH_CMD: bytes_so_far_sent:7168 -- bytes_remaining:17732[0m
+[0;32mI (2597071) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10393[0m
+[0;32mI (2597151) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597151) FLASH_CMD: Flash progress: 7296/24900 bytes (29.3%)[0m
+[0;32mI (2597151) FLASH_CMD: base mem address = 0x08009c80[0m
+[0;32mI (2597151) FLASH_CMD: bytes_so_far_sent:7296 -- bytes_remaining:17604[0m
+[0;32mI (2597191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=13067[0m
+[0;32mI (2597281) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597281) FLASH_CMD: Flash progress: 7424/24900 bytes (29.8%)[0m
+[0;32mI (2597281) FLASH_CMD: base mem address = 0x08009d00[0m
+[0;32mI (2597281) FLASH_CMD: bytes_so_far_sent:7424 -- bytes_remaining:17476[0m
+[0;32mI (2597311) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=40265[0m
+[0;32mI (2597411) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597411) FLASH_CMD: Flash progress: 7552/24900 bytes (30.3%)[0m
+[0;32mI (2597411) FLASH_CMD: base mem address = 0x08009d80[0m
+[0;32mI (2597411) FLASH_CMD: bytes_so_far_sent:7552 -- bytes_remaining:17348[0m
+[0;32mI (2597451) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=11005[0m
+[0;32mI (2597541) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597541) FLASH_CMD: Flash progress: 7680/24900 bytes (30.8%)[0m
+[0;32mI (2597541) FLASH_CMD: base mem address = 0x08009e00[0m
+[0;32mI (2597541) FLASH_CMD: bytes_so_far_sent:7680 -- bytes_remaining:17220[0m
+[0;32mI (2597581) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=38111[0m
+[0;32mI (2597671) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597671) FLASH_CMD: Flash progress: 7808/24900 bytes (31.4%)[0m
+[0;32mI (2597671) FLASH_CMD: base mem address = 0x08009e80[0m
+[0;32mI (2597671) FLASH_CMD: bytes_so_far_sent:7808 -- bytes_remaining:17092[0m
+[0;32mI (2597711) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=42785[0m
+[0;32mI (2597801) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597801) FLASH_CMD: Flash progress: 7936/24900 bytes (31.9%)[0m
+[0;32mI (2597801) FLASH_CMD: base mem address = 0x08009f00[0m
+[0;32mI (2597801) FLASH_CMD: bytes_so_far_sent:7936 -- bytes_remaining:16964[0m
+[0;32mI (2597831) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43831[0m
+[0;32mI (2597931) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2597931) FLASH_CMD: Flash progress: 8064/24900 bytes (32.4%)[0m
+[0;32mI (2597931) FLASH_CMD: base mem address = 0x08009f80[0m
+[0;32mI (2597931) FLASH_CMD: bytes_so_far_sent:8064 -- bytes_remaining:16836[0m
+[0;32mI (2597971) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50512[0m
+[0;32mI (2598061) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598061) FLASH_CMD: Flash progress: 8192/24900 bytes (32.9%)[0m
+[0;32mI (2598061) FLASH_CMD: base mem address = 0x0800a000[0m
+[0;32mI (2598061) FLASH_CMD: bytes_so_far_sent:8192 -- bytes_remaining:16708[0m
+[0;32mI (2598101) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=3949[0m
+[0;32mI (2598191) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598191) FLASH_CMD: Flash progress: 8320/24900 bytes (33.4%)[0m
+[0;32mI (2598191) FLASH_CMD: base mem address = 0x0800a080[0m
+[0;32mI (2598191) FLASH_CMD: bytes_so_far_sent:8320 -- bytes_remaining:16580[0m
+[0;32mI (2598231) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=6330[0m
+[0;32mI (2598331) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598331) FLASH_CMD: Flash progress: 8448/24900 bytes (33.9%)[0m
+[0;32mI (2598331) FLASH_CMD: base mem address = 0x0800a100[0m
+[0;32mI (2598331) FLASH_CMD: bytes_so_far_sent:8448 -- bytes_remaining:16452[0m
+[0;32mI (2598371) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=44074[0m
+[0;32mI (2598461) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598461) FLASH_CMD: Flash progress: 8576/24900 bytes (34.4%)[0m
+[0;32mI (2598461) FLASH_CMD: base mem address = 0x0800a180[0m
+[0;32mI (2598461) FLASH_CMD: bytes_so_far_sent:8576 -- bytes_remaining:16324[0m
+[0;32mI (2598501) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=25420[0m
+[0;32mI (2598591) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598591) FLASH_CMD: Flash progress: 8704/24900 bytes (35.0%)[0m
+[0;32mI (2598591) FLASH_CMD: base mem address = 0x0800a200[0m
+[0;32mI (2598591) FLASH_CMD: bytes_so_far_sent:8704 -- bytes_remaining:16196[0m
+[0;32mI (2598631) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5337[0m
+[0;32mI (2598721) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598721) FLASH_CMD: Flash progress: 8832/24900 bytes (35.5%)[0m
+[0;32mI (2598721) FLASH_CMD: base mem address = 0x0800a280[0m
+[0;32mI (2598721) FLASH_CMD: bytes_so_far_sent:8832 -- bytes_remaining:16068[0m
+[0;32mI (2598761) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=37880[0m
+[0;32mI (2598851) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598851) FLASH_CMD: Flash progress: 8960/24900 bytes (36.0%)[0m
+[0;32mI (2598851) FLASH_CMD: base mem address = 0x0800a300[0m
+[0;32mI (2598851) FLASH_CMD: bytes_so_far_sent:8960 -- bytes_remaining:15940[0m
+[0;32mI (2598891) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34353[0m
+[0;32mI (2598981) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2598981) FLASH_CMD: Flash progress: 9088/24900 bytes (36.5%)[0m
+[0;32mI (2598981) FLASH_CMD: base mem address = 0x0800a380[0m
+[0;32mI (2598981) FLASH_CMD: bytes_so_far_sent:9088 -- bytes_remaining:15812[0m
+[0;32mI (2599021) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22559[0m
+[0;32mI (2599111) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599111) FLASH_CMD: Flash progress: 9216/24900 bytes (37.0%)[0m
+[0;32mI (2599111) FLASH_CMD: base mem address = 0x0800a400[0m
+[0;32mI (2599111) FLASH_CMD: bytes_so_far_sent:9216 -- bytes_remaining:15684[0m
+[0;32mI (2599151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=7473[0m
+[0;32mI (2599251) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599251) FLASH_CMD: Flash progress: 9344/24900 bytes (37.5%)[0m
+[0;32mI (2599251) FLASH_CMD: base mem address = 0x0800a480[0m
+[0;32mI (2599251) FLASH_CMD: bytes_so_far_sent:9344 -- bytes_remaining:15556[0m
+[0;32mI (2599291) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=19843[0m
+[0;32mI (2599381) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599381) FLASH_CMD: Flash progress: 9472/24900 bytes (38.0%)[0m
+[0;32mI (2599381) FLASH_CMD: base mem address = 0x0800a500[0m
+[0;32mI (2599381) FLASH_CMD: bytes_so_far_sent:9472 -- bytes_remaining:15428[0m
+[0;32mI (2599421) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=57567[0m
+[0;32mI (2599511) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599511) FLASH_CMD: Flash progress: 9600/24900 bytes (38.6%)[0m
+[0;32mI (2599511) FLASH_CMD: base mem address = 0x0800a580[0m
+[0;32mI (2599511) FLASH_CMD: bytes_so_far_sent:9600 -- bytes_remaining:15300[0m
+[0;32mI (2599551) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=49502[0m
+[0;32mI (2599641) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599641) FLASH_CMD: Flash progress: 9728/24900 bytes (39.1%)[0m
+[0;32mI (2599641) FLASH_CMD: base mem address = 0x0800a600[0m
+[0;32mI (2599641) FLASH_CMD: bytes_so_far_sent:9728 -- bytes_remaining:15172[0m
+[0;32mI (2599681) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=21851[0m
+[0;32mI (2599771) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599771) FLASH_CMD: Flash progress: 9856/24900 bytes (39.6%)[0m
+[0;32mI (2599771) FLASH_CMD: base mem address = 0x0800a680[0m
+[0;32mI (2599771) FLASH_CMD: bytes_so_far_sent:9856 -- bytes_remaining:15044[0m
+[0;32mI (2599821) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=33687[0m
+[0;32mI (2599901) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2599901) FLASH_CMD: Flash progress: 9984/24900 bytes (40.1%)[0m
+[0;32mI (2599901) FLASH_CMD: base mem address = 0x0800a700[0m
+[0;32mI (2599901) FLASH_CMD: bytes_so_far_sent:9984 -- bytes_remaining:14916[0m
+[0;32mI (2599941) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=11275[0m
+[0;32mI (2600031) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600031) FLASH_CMD: Flash progress: 10112/24900 bytes (40.6%)[0m
+[0;32mI (2600031) FLASH_CMD: base mem address = 0x0800a780[0m
+[0;32mI (2600031) FLASH_CMD: bytes_so_far_sent:10112 -- bytes_remaining:14788[0m
+[0;32mI (2600071) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=29242[0m
+[0;32mI (2600161) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600161) FLASH_CMD: Flash progress: 10240/24900 bytes (41.1%)[0m
+[0;32mI (2600161) FLASH_CMD: base mem address = 0x0800a800[0m
+[0;32mI (2600161) FLASH_CMD: bytes_so_far_sent:10240 -- bytes_remaining:14660[0m
+[0;32mI (2600201) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10023[0m
+[0;32mI (2600291) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600291) FLASH_CMD: Flash progress: 10368/24900 bytes (41.6%)[0m
+[0;32mI (2600291) FLASH_CMD: base mem address = 0x0800a880[0m
+[0;32mI (2600291) FLASH_CMD: bytes_so_far_sent:10368 -- bytes_remaining:14532[0m
+[0;32mI (2600341) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=37469[0m
+[0;32mI (2600421) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600421) FLASH_CMD: Flash progress: 10496/24900 bytes (42.2%)[0m
+[0;32mI (2600421) FLASH_CMD: base mem address = 0x0800a900[0m
+[0;32mI (2600421) FLASH_CMD: bytes_so_far_sent:10496 -- bytes_remaining:14404[0m
+[0;32mI (2600461) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=32993[0m
+[0;32mI (2600551) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600551) FLASH_CMD: Flash progress: 10624/24900 bytes (42.7%)[0m
+[0;32mI (2600551) FLASH_CMD: base mem address = 0x0800a980[0m
+[0;32mI (2600551) FLASH_CMD: bytes_so_far_sent:10624 -- bytes_remaining:14276[0m
+[0;32mI (2600591) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22687[0m
+[0;32mI (2600681) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600681) FLASH_CMD: Flash progress: 10752/24900 bytes (43.2%)[0m
+[0;32mI (2600681) FLASH_CMD: base mem address = 0x0800aa00[0m
+[0;32mI (2600681) FLASH_CMD: bytes_so_far_sent:10752 -- bytes_remaining:14148[0m
+[0;32mI (2600731) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=31744[0m
+[0;32mI (2600811) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600811) FLASH_CMD: Flash progress: 10880/24900 bytes (43.7%)[0m
+[0;32mI (2600811) FLASH_CMD: base mem address = 0x0800aa80[0m
+[0;32mI (2600811) FLASH_CMD: bytes_so_far_sent:10880 -- bytes_remaining:14020[0m
+[0;32mI (2600851) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=29059[0m
+[0;32mI (2600941) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2600941) FLASH_CMD: Flash progress: 11008/24900 bytes (44.2%)[0m
+[0;32mI (2600941) FLASH_CMD: base mem address = 0x0800ab00[0m
+[0;32mI (2600941) FLASH_CMD: bytes_so_far_sent:11008 -- bytes_remaining:13892[0m
+[0;32mI (2600981) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=21488[0m
+[0;32mI (2601071) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601071) FLASH_CMD: Flash progress: 11136/24900 bytes (44.7%)[0m
+[0;32mI (2601071) FLASH_CMD: base mem address = 0x0800ab80[0m
+[0;32mI (2601071) FLASH_CMD: bytes_so_far_sent:11136 -- bytes_remaining:13764[0m
+[0;32mI (2601121) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34367[0m
+[0;32mI (2601201) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601201) FLASH_CMD: Flash progress: 11264/24900 bytes (45.2%)[0m
+[0;32mI (2601201) FLASH_CMD: base mem address = 0x0800ac00[0m
+[0;32mI (2601201) FLASH_CMD: bytes_so_far_sent:11264 -- bytes_remaining:13636[0m
+[0;32mI (2601241) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=33794[0m
+[0;32mI (2601331) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601331) FLASH_CMD: Flash progress: 11392/24900 bytes (45.8%)[0m
+[0;32mI (2601331) FLASH_CMD: base mem address = 0x0800ac80[0m
+[0;32mI (2601331) FLASH_CMD: bytes_so_far_sent:11392 -- bytes_remaining:13508[0m
+[0;32mI (2601371) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=58520[0m
+[0;32mI (2601461) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601461) FLASH_CMD: Flash progress: 11520/24900 bytes (46.3%)[0m
+[0;32mI (2601461) FLASH_CMD: base mem address = 0x0800ad00[0m
+[0;32mI (2601461) FLASH_CMD: bytes_so_far_sent:11520 -- bytes_remaining:13380[0m
+[0;32mI (2601501) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=48270[0m
+[0;32mI (2601591) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601591) FLASH_CMD: Flash progress: 11648/24900 bytes (46.8%)[0m
+[0;32mI (2601591) FLASH_CMD: base mem address = 0x0800ad80[0m
+[0;32mI (2601591) FLASH_CMD: bytes_so_far_sent:11648 -- bytes_remaining:13252[0m
+[0;32mI (2601631) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=12972[0m
+[0;32mI (2601721) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601721) FLASH_CMD: Flash progress: 11776/24900 bytes (47.3%)[0m
+[0;32mI (2601721) FLASH_CMD: base mem address = 0x0800ae00[0m
+[0;32mI (2601721) FLASH_CMD: bytes_so_far_sent:11776 -- bytes_remaining:13124[0m
+[0;32mI (2601771) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52877[0m
+[0;32mI (2601851) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601851) FLASH_CMD: Flash progress: 11904/24900 bytes (47.8%)[0m
+[0;32mI (2601851) FLASH_CMD: base mem address = 0x0800ae80[0m
+[0;32mI (2601851) FLASH_CMD: bytes_so_far_sent:11904 -- bytes_remaining:12996[0m
+[0;32mI (2601901) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=44760[0m
+[0;32mI (2601981) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2601981) FLASH_CMD: Flash progress: 12032/24900 bytes (48.3%)[0m
+[0;32mI (2601981) FLASH_CMD: base mem address = 0x0800af00[0m
+[0;32mI (2601981) FLASH_CMD: bytes_so_far_sent:12032 -- bytes_remaining:12868[0m
+[0;32mI (2602021) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=39702[0m
+[0;32mI (2602111) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602111) FLASH_CMD: Flash progress: 12160/24900 bytes (48.8%)[0m
+[0;32mI (2602111) FLASH_CMD: base mem address = 0x0800af80[0m
+[0;32mI (2602111) FLASH_CMD: bytes_so_far_sent:12160 -- bytes_remaining:12740[0m
+[0;32mI (2602151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9427[0m
+[0;32mI (2602241) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602241) FLASH_CMD: Flash progress: 12288/24900 bytes (49.3%)[0m
+[0;32mI (2602241) FLASH_CMD: base mem address = 0x0800b000[0m
+[0;32mI (2602241) FLASH_CMD: bytes_so_far_sent:12288 -- bytes_remaining:12612[0m
+[0;32mI (2602271) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=61114[0m
+[0;32mI (2602371) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602371) FLASH_CMD: Flash progress: 12416/24900 bytes (49.9%)[0m
+[0;32mI (2602371) FLASH_CMD: base mem address = 0x0800b080[0m
+[0;32mI (2602371) FLASH_CMD: bytes_so_far_sent:12416 -- bytes_remaining:12484[0m
+[0;32mI (2602411) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=44819[0m
+[0;32mI (2602501) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602501) FLASH_CMD: Flash progress: 12544/24900 bytes (50.4%)[0m
+[0;32mI (2602501) FLASH_CMD: base mem address = 0x0800b100[0m
+[0;32mI (2602501) FLASH_CMD: bytes_so_far_sent:12544 -- bytes_remaining:12356[0m
+[0;32mI (2602541) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52912[0m
+[0;32mI (2602631) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602631) FLASH_CMD: Flash progress: 12672/24900 bytes (50.9%)[0m
+[0;32mI (2602631) FLASH_CMD: base mem address = 0x0800b180[0m
+[0;32mI (2602631) FLASH_CMD: bytes_so_far_sent:12672 -- bytes_remaining:12228[0m
+[0;32mI (2602701) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=47686[0m
+[0;32mI (2602761) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602761) FLASH_CMD: Flash progress: 12800/24900 bytes (51.4%)[0m
+[0;32mI (2602761) FLASH_CMD: base mem address = 0x0800b200[0m
+[0;32mI (2602761) FLASH_CMD: bytes_so_far_sent:12800 -- bytes_remaining:12100[0m
+[0;32mI (2602821) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9904[0m
+[0;32mI (2602891) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2602891) FLASH_CMD: Flash progress: 12928/24900 bytes (51.9%)[0m
+[0;32mI (2602891) FLASH_CMD: base mem address = 0x0800b280[0m
+[0;32mI (2602891) FLASH_CMD: bytes_so_far_sent:12928 -- bytes_remaining:11972[0m
+[0;32mI (2602941) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9808[0m
+[0;32mI (2603021) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603021) FLASH_CMD: Flash progress: 13056/24900 bytes (52.4%)[0m
+[0;32mI (2603021) FLASH_CMD: base mem address = 0x0800b300[0m
+[0;32mI (2603021) FLASH_CMD: bytes_so_far_sent:13056 -- bytes_remaining:11844[0m
+[0;32mI (2603071) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=60480[0m
+[0;32mI (2603151) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603151) FLASH_CMD: Flash progress: 13184/24900 bytes (52.9%)[0m
+[0;32mI (2603151) FLASH_CMD: base mem address = 0x0800b380[0m
+[0;32mI (2603151) FLASH_CMD: bytes_so_far_sent:13184 -- bytes_remaining:11716[0m
+[0;32mI (2603191) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=18019[0m
+[0;32mI (2603281) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603281) FLASH_CMD: Flash progress: 13312/24900 bytes (53.5%)[0m
+[0;32mI (2603281) FLASH_CMD: base mem address = 0x0800b400[0m
+[0;32mI (2603281) FLASH_CMD: bytes_so_far_sent:13312 -- bytes_remaining:11588[0m
+[0;32mI (2603321) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16022[0m
+[0;32mI (2603411) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603411) FLASH_CMD: Flash progress: 13440/24900 bytes (54.0%)[0m
+[0;32mI (2603411) FLASH_CMD: base mem address = 0x0800b480[0m
+[0;32mI (2603411) FLASH_CMD: bytes_so_far_sent:13440 -- bytes_remaining:11460[0m
+[0;32mI (2603451) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=24215[0m
+[0;32mI (2603541) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603541) FLASH_CMD: Flash progress: 13568/24900 bytes (54.5%)[0m
+[0;32mI (2603541) FLASH_CMD: base mem address = 0x0800b500[0m
+[0;32mI (2603541) FLASH_CMD: bytes_so_far_sent:13568 -- bytes_remaining:11332[0m
+[0;32mI (2603591) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34075[0m
+[0;32mI (2603671) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603671) FLASH_CMD: Flash progress: 13696/24900 bytes (55.0%)[0m
+[0;32mI (2603671) FLASH_CMD: base mem address = 0x0800b580[0m
+[0;32mI (2603671) FLASH_CMD: bytes_so_far_sent:13696 -- bytes_remaining:11204[0m
+[0;32mI (2603731) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=17164[0m
+[0;32mI (2603801) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603801) FLASH_CMD: Flash progress: 13824/24900 bytes (55.5%)[0m
+[0;32mI (2603801) FLASH_CMD: base mem address = 0x0800b600[0m
+[0;32mI (2603801) FLASH_CMD: bytes_so_far_sent:13824 -- bytes_remaining:11076[0m
+[0;32mI (2603891) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=17355[0m
+[0;32mI (2603931) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2603931) FLASH_CMD: Flash progress: 13952/24900 bytes (56.0%)[0m
+[0;32mI (2603931) FLASH_CMD: base mem address = 0x0800b680[0m
+[0;32mI (2603931) FLASH_CMD: bytes_so_far_sent:13952 -- bytes_remaining:10948[0m
+[0;32mI (2603971) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=14308[0m
+[0;32mI (2604061) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604061) FLASH_CMD: Flash progress: 14080/24900 bytes (56.5%)[0m
+[0;32mI (2604061) FLASH_CMD: base mem address = 0x0800b700[0m
+[0;32mI (2604061) FLASH_CMD: bytes_so_far_sent:14080 -- bytes_remaining:10820[0m
+[0;32mI (2604101) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=30848[0m
+[0;32mI (2604191) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604191) FLASH_CMD: Flash progress: 14208/24900 bytes (57.1%)[0m
+[0;32mI (2604191) FLASH_CMD: base mem address = 0x0800b780[0m
+[0;32mI (2604191) FLASH_CMD: bytes_so_far_sent:14208 -- bytes_remaining:10692[0m
+[0;32mI (2604231) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=45035[0m
+[0;32mI (2604321) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604321) FLASH_CMD: Flash progress: 14336/24900 bytes (57.6%)[0m
+[0;32mI (2604321) FLASH_CMD: base mem address = 0x0800b800[0m
+[0;32mI (2604321) FLASH_CMD: bytes_so_far_sent:14336 -- bytes_remaining:10564[0m
+[0;32mI (2604371) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=39472[0m
+[0;32mI (2604451) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604451) FLASH_CMD: Flash progress: 14464/24900 bytes (58.1%)[0m
+[0;32mI (2604451) FLASH_CMD: base mem address = 0x0800b880[0m
+[0;32mI (2604451) FLASH_CMD: bytes_so_far_sent:14464 -- bytes_remaining:10436[0m
+[0;32mI (2604491) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=19189[0m
+[0;32mI (2604581) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604581) FLASH_CMD: Flash progress: 14592/24900 bytes (58.6%)[0m
+[0;32mI (2604581) FLASH_CMD: base mem address = 0x0800b900[0m
+[0;32mI (2604581) FLASH_CMD: bytes_so_far_sent:14592 -- bytes_remaining:10308[0m
+[0;32mI (2604631) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=31502[0m
+[0;32mI (2604711) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604711) FLASH_CMD: Flash progress: 14720/24900 bytes (59.1%)[0m
+[0;32mI (2604711) FLASH_CMD: base mem address = 0x0800b980[0m
+[0;32mI (2604711) FLASH_CMD: bytes_so_far_sent:14720 -- bytes_remaining:10180[0m
+[0;32mI (2604771) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=40860[0m
+[0;32mI (2604841) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604841) FLASH_CMD: Flash progress: 14848/24900 bytes (59.6%)[0m
+[0;32mI (2604841) FLASH_CMD: base mem address = 0x0800ba00[0m
+[0;32mI (2604841) FLASH_CMD: bytes_so_far_sent:14848 -- bytes_remaining:10052[0m
+[0;32mI (2604881) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=36439[0m
+[0;32mI (2604971) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2604971) FLASH_CMD: Flash progress: 14976/24900 bytes (60.1%)[0m
+[0;32mI (2604971) FLASH_CMD: base mem address = 0x0800ba80[0m
+[0;32mI (2604971) FLASH_CMD: bytes_so_far_sent:14976 -- bytes_remaining:9924[0m
+[0;32mI (2605021) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=30417[0m
+[0;32mI (2605101) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605101) FLASH_CMD: Flash progress: 15104/24900 bytes (60.7%)[0m
+[0;32mI (2605101) FLASH_CMD: base mem address = 0x0800bb00[0m
+[0;32mI (2605101) FLASH_CMD: bytes_so_far_sent:15104 -- bytes_remaining:9796[0m
+[0;32mI (2605141) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=15292[0m
+[0;32mI (2605231) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605231) FLASH_CMD: Flash progress: 15232/24900 bytes (61.2%)[0m
+[0;32mI (2605231) FLASH_CMD: base mem address = 0x0800bb80[0m
+[0;32mI (2605231) FLASH_CMD: bytes_so_far_sent:15232 -- bytes_remaining:9668[0m
+[0;32mI (2605271) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=20134[0m
+[0;32mI (2605361) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605361) FLASH_CMD: Flash progress: 15360/24900 bytes (61.7%)[0m
+[0;32mI (2605361) FLASH_CMD: base mem address = 0x0800bc00[0m
+[0;32mI (2605361) FLASH_CMD: bytes_so_far_sent:15360 -- bytes_remaining:9540[0m
+[0;32mI (2605411) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=13333[0m
+[0;32mI (2605491) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605491) FLASH_CMD: Flash progress: 15488/24900 bytes (62.2%)[0m
+[0;32mI (2605491) FLASH_CMD: base mem address = 0x0800bc80[0m
+[0;32mI (2605491) FLASH_CMD: bytes_so_far_sent:15488 -- bytes_remaining:9412[0m
+[0;32mI (2605551) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=35474[0m
+[0;32mI (2605621) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605621) FLASH_CMD: Flash progress: 15616/24900 bytes (62.7%)[0m
+[0;32mI (2605621) FLASH_CMD: base mem address = 0x0800bd00[0m
+[0;32mI (2605621) FLASH_CMD: bytes_so_far_sent:15616 -- bytes_remaining:9284[0m
+[0;32mI (2605681) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=59573[0m
+[0;32mI (2605751) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605751) FLASH_CMD: Flash progress: 15744/24900 bytes (63.2%)[0m
+[0;32mI (2605751) FLASH_CMD: base mem address = 0x0800bd80[0m
+[0;32mI (2605751) FLASH_CMD: bytes_so_far_sent:15744 -- bytes_remaining:9156[0m
+[0;32mI (2605791) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=28026[0m
+[0;32mI (2605881) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2605881) FLASH_CMD: Flash progress: 15872/24900 bytes (63.7%)[0m
+[0;32mI (2605881) FLASH_CMD: base mem address = 0x0800be00[0m
+[0;32mI (2605881) FLASH_CMD: bytes_so_far_sent:15872 -- bytes_remaining:9028[0m
+[0;32mI (2605921) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=12720[0m
+[0;32mI (2606011) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606011) FLASH_CMD: Flash progress: 16000/24900 bytes (64.3%)[0m
+[0;32mI (2606011) FLASH_CMD: base mem address = 0x0800be80[0m
+[0;32mI (2606011) FLASH_CMD: bytes_so_far_sent:16000 -- bytes_remaining:8900[0m
+[0;32mI (2606061) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=2355[0m
+[0;32mI (2606141) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606141) FLASH_CMD: Flash progress: 16128/24900 bytes (64.8%)[0m
+[0;32mI (2606141) FLASH_CMD: base mem address = 0x0800bf00[0m
+[0;32mI (2606141) FLASH_CMD: bytes_so_far_sent:16128 -- bytes_remaining:8772[0m
+[0;32mI (2606181) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=46090[0m
+[0;32mI (2606271) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606271) FLASH_CMD: Flash progress: 16256/24900 bytes (65.3%)[0m
+[0;32mI (2606271) FLASH_CMD: base mem address = 0x0800bf80[0m
+[0;32mI (2606271) FLASH_CMD: bytes_so_far_sent:16256 -- bytes_remaining:8644[0m
+[0;32mI (2606321) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=18065[0m
+[0;32mI (2606401) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606401) FLASH_CMD: Flash progress: 16384/24900 bytes (65.8%)[0m
+[0;32mI (2606401) FLASH_CMD: base mem address = 0x0800c000[0m
+[0;32mI (2606401) FLASH_CMD: bytes_so_far_sent:16384 -- bytes_remaining:8516[0m
+[0;32mI (2606441) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=61985[0m
+[0;32mI (2606531) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606531) FLASH_CMD: Flash progress: 16512/24900 bytes (66.3%)[0m
+[0;32mI (2606531) FLASH_CMD: base mem address = 0x0800c080[0m
+[0;32mI (2606531) FLASH_CMD: bytes_so_far_sent:16512 -- bytes_remaining:8388[0m
+[0;32mI (2606571) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5701[0m
+[0;32mI (2606661) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606661) FLASH_CMD: Flash progress: 16640/24900 bytes (66.8%)[0m
+[0;32mI (2606661) FLASH_CMD: base mem address = 0x0800c100[0m
+[0;32mI (2606661) FLASH_CMD: bytes_so_far_sent:16640 -- bytes_remaining:8260[0m
+[0;32mI (2606721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=13443[0m
+[0;32mI (2606791) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606791) FLASH_CMD: Flash progress: 16768/24900 bytes (67.3%)[0m
+[0;32mI (2606791) FLASH_CMD: base mem address = 0x0800c180[0m
+[0;32mI (2606791) FLASH_CMD: bytes_so_far_sent:16768 -- bytes_remaining:8132[0m
+[0;32mI (2606831) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=47877[0m
+[0;32mI (2606921) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2606921) FLASH_CMD: Flash progress: 16896/24900 bytes (67.9%)[0m
+[0;32mI (2606921) FLASH_CMD: base mem address = 0x0800c200[0m
+[0;32mI (2606921) FLASH_CMD: bytes_so_far_sent:16896 -- bytes_remaining:8004[0m
+[0;32mI (2606961) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=5891[0m
+[0;32mI (2607051) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607051) FLASH_CMD: Flash progress: 17024/24900 bytes (68.4%)[0m
+[0;32mI (2607051) FLASH_CMD: base mem address = 0x0800c280[0m
+[0;32mI (2607051) FLASH_CMD: bytes_so_far_sent:17024 -- bytes_remaining:7876[0m
+[0;32mI (2607091) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=25713[0m
+[0;32mI (2607181) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607181) FLASH_CMD: Flash progress: 17152/24900 bytes (68.9%)[0m
+[0;32mI (2607181) FLASH_CMD: base mem address = 0x0800c300[0m
+[0;32mI (2607181) FLASH_CMD: bytes_so_far_sent:17152 -- bytes_remaining:7748[0m
+[0;32mI (2607231) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=35120[0m
+[0;32mI (2607311) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607311) FLASH_CMD: Flash progress: 17280/24900 bytes (69.4%)[0m
+[0;32mI (2607311) FLASH_CMD: base mem address = 0x0800c380[0m
+[0;32mI (2607311) FLASH_CMD: bytes_so_far_sent:17280 -- bytes_remaining:7620[0m
+[0;32mI (2607351) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43466[0m
+[0;32mI (2607441) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607441) FLASH_CMD: Flash progress: 17408/24900 bytes (69.9%)[0m
+[0;32mI (2607441) FLASH_CMD: base mem address = 0x0800c400[0m
+[0;32mI (2607441) FLASH_CMD: bytes_so_far_sent:17408 -- bytes_remaining:7492[0m
+[0;32mI (2607481) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=59367[0m
+[0;32mI (2607571) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607571) FLASH_CMD: Flash progress: 17536/24900 bytes (70.4%)[0m
+[0;32mI (2607571) FLASH_CMD: base mem address = 0x0800c480[0m
+[0;32mI (2607571) FLASH_CMD: bytes_so_far_sent:17536 -- bytes_remaining:7364[0m
+[0;32mI (2607611) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=32789[0m
+[0;32mI (2607701) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607701) FLASH_CMD: Flash progress: 17664/24900 bytes (70.9%)[0m
+[0;32mI (2607701) FLASH_CMD: base mem address = 0x0800c500[0m
+[0;32mI (2607701) FLASH_CMD: bytes_so_far_sent:17664 -- bytes_remaining:7236[0m
+[0;32mI (2607741) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=36214[0m
+[0;32mI (2607831) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607831) FLASH_CMD: Flash progress: 17792/24900 bytes (71.5%)[0m
+[0;32mI (2607831) FLASH_CMD: base mem address = 0x0800c580[0m
+[0;32mI (2607831) FLASH_CMD: bytes_so_far_sent:17792 -- bytes_remaining:7108[0m
+[0;32mI (2607871) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10398[0m
+[0;32mI (2607961) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2607961) FLASH_CMD: Flash progress: 17920/24900 bytes (72.0%)[0m
+[0;32mI (2607961) FLASH_CMD: base mem address = 0x0800c600[0m
+[0;32mI (2607961) FLASH_CMD: bytes_so_far_sent:17920 -- bytes_remaining:6980[0m
+[0;32mI (2608001) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=50414[0m
+[0;32mI (2608091) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608091) FLASH_CMD: Flash progress: 18048/24900 bytes (72.5%)[0m
+[0;32mI (2608091) FLASH_CMD: base mem address = 0x0800c680[0m
+[0;32mI (2608091) FLASH_CMD: bytes_so_far_sent:18048 -- bytes_remaining:6852[0m
+[0;32mI (2608131) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9130[0m
+[0;32mI (2608221) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608221) FLASH_CMD: Flash progress: 18176/24900 bytes (73.0%)[0m
+[0;32mI (2608221) FLASH_CMD: base mem address = 0x0800c700[0m
+[0;32mI (2608221) FLASH_CMD: bytes_so_far_sent:18176 -- bytes_remaining:6724[0m
+[0;32mI (2608261) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=38619[0m
+[0;32mI (2608351) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608351) FLASH_CMD: Flash progress: 18304/24900 bytes (73.5%)[0m
+[0;32mI (2608351) FLASH_CMD: base mem address = 0x0800c780[0m
+[0;32mI (2608351) FLASH_CMD: bytes_so_far_sent:18304 -- bytes_remaining:6596[0m
+[0;32mI (2608391) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=57980[0m
+[0;32mI (2608481) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608481) FLASH_CMD: Flash progress: 18432/24900 bytes (74.0%)[0m
+[0;32mI (2608481) FLASH_CMD: base mem address = 0x0800c800[0m
+[0;32mI (2608481) FLASH_CMD: bytes_so_far_sent:18432 -- bytes_remaining:6468[0m
+[0;32mI (2608521) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=49072[0m
+[0;32mI (2608611) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608611) FLASH_CMD: Flash progress: 18560/24900 bytes (74.5%)[0m
+[0;32mI (2608611) FLASH_CMD: base mem address = 0x0800c880[0m
+[0;32mI (2608611) FLASH_CMD: bytes_so_far_sent:18560 -- bytes_remaining:6340[0m
+[0;32mI (2608651) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=60306[0m
+[0;32mI (2608741) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608741) FLASH_CMD: Flash progress: 18688/24900 bytes (75.1%)[0m
+[0;32mI (2608741) FLASH_CMD: base mem address = 0x0800c900[0m
+[0;32mI (2608741) FLASH_CMD: bytes_so_far_sent:18688 -- bytes_remaining:6212[0m
+[0;32mI (2608781) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43944[0m
+[0;32mI (2608871) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2608871) FLASH_CMD: Flash progress: 18816/24900 bytes (75.6%)[0m
+[0;32mI (2608871) FLASH_CMD: base mem address = 0x0800c980[0m
+[0;32mI (2608871) FLASH_CMD: bytes_so_far_sent:18816 -- bytes_remaining:6084[0m
+[0;32mI (2608911) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34206[0m
+[0;32mI (2609001) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609001) FLASH_CMD: Flash progress: 18944/24900 bytes (76.1%)[0m
+[0;32mI (2609001) FLASH_CMD: base mem address = 0x0800ca00[0m
+[0;32mI (2609001) FLASH_CMD: bytes_so_far_sent:18944 -- bytes_remaining:5956[0m
+[0;32mI (2609041) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=19113[0m
+[0;32mI (2609131) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609131) FLASH_CMD: Flash progress: 19072/24900 bytes (76.6%)[0m
+[0;32mI (2609131) FLASH_CMD: base mem address = 0x0800ca80[0m
+[0;32mI (2609131) FLASH_CMD: bytes_so_far_sent:19072 -- bytes_remaining:5828[0m
+[0;32mI (2609171) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52538[0m
+[0;32mI (2609261) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609261) FLASH_CMD: Flash progress: 19200/24900 bytes (77.1%)[0m
+[0;32mI (2609261) FLASH_CMD: base mem address = 0x0800cb00[0m
+[0;32mI (2609261) FLASH_CMD: bytes_so_far_sent:19200 -- bytes_remaining:5700[0m
+[0;32mI (2609301) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=27736[0m
+[0;32mI (2609391) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609391) FLASH_CMD: Flash progress: 19328/24900 bytes (77.6%)[0m
+[0;32mI (2609391) FLASH_CMD: base mem address = 0x0800cb80[0m
+[0;32mI (2609391) FLASH_CMD: bytes_so_far_sent:19328 -- bytes_remaining:5572[0m
+[0;32mI (2609431) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=369[0m
+[0;32mI (2609521) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609521) FLASH_CMD: Flash progress: 19456/24900 bytes (78.1%)[0m
+[0;32mI (2609521) FLASH_CMD: base mem address = 0x0800cc00[0m
+[0;32mI (2609521) FLASH_CMD: bytes_so_far_sent:19456 -- bytes_remaining:5444[0m
+[0;32mI (2609561) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43367[0m
+[0;32mI (2609651) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609651) FLASH_CMD: Flash progress: 19584/24900 bytes (78.7%)[0m
+[0;32mI (2609651) FLASH_CMD: base mem address = 0x0800cc80[0m
+[0;32mI (2609651) FLASH_CMD: bytes_so_far_sent:19584 -- bytes_remaining:5316[0m
+[0;32mI (2609681) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=6364[0m
+[0;32mI (2609781) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609781) FLASH_CMD: Flash progress: 19712/24900 bytes (79.2%)[0m
+[0;32mI (2609781) FLASH_CMD: base mem address = 0x0800cd00[0m
+[0;32mI (2609781) FLASH_CMD: bytes_so_far_sent:19712 -- bytes_remaining:5188[0m
+[0;32mI (2609821) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=2223[0m
+[0;32mI (2609911) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2609911) FLASH_CMD: Flash progress: 19840/24900 bytes (79.7%)[0m
+[0;32mI (2609911) FLASH_CMD: base mem address = 0x0800cd80[0m
+[0;32mI (2609911) FLASH_CMD: bytes_so_far_sent:19840 -- bytes_remaining:5060[0m
+[0;32mI (2609951) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=6929[0m
+[0;32mI (2610041) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610041) FLASH_CMD: Flash progress: 19968/24900 bytes (80.2%)[0m
+[0;32mI (2610041) FLASH_CMD: base mem address = 0x0800ce00[0m
+[0;32mI (2610041) FLASH_CMD: bytes_so_far_sent:19968 -- bytes_remaining:4932[0m
+[0;32mI (2610081) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=45320[0m
+[0;32mI (2610171) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610171) FLASH_CMD: Flash progress: 20096/24900 bytes (80.7%)[0m
+[0;32mI (2610171) FLASH_CMD: base mem address = 0x0800ce80[0m
+[0;32mI (2610171) FLASH_CMD: bytes_so_far_sent:20096 -- bytes_remaining:4804[0m
+[0;32mI (2610211) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=61060[0m
+[0;32mI (2610301) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610301) FLASH_CMD: Flash progress: 20224/24900 bytes (81.2%)[0m
+[0;32mI (2610301) FLASH_CMD: base mem address = 0x0800cf00[0m
+[0;32mI (2610301) FLASH_CMD: bytes_so_far_sent:20224 -- bytes_remaining:4676[0m
+[0;32mI (2610331) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=22228[0m
+[0;32mI (2610431) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610431) FLASH_CMD: Flash progress: 20352/24900 bytes (81.7%)[0m
+[0;32mI (2610431) FLASH_CMD: base mem address = 0x0800cf80[0m
+[0;32mI (2610431) FLASH_CMD: bytes_so_far_sent:20352 -- bytes_remaining:4548[0m
+[0;32mI (2610471) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=35158[0m
+[0;32mI (2610561) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610561) FLASH_CMD: Flash progress: 20480/24900 bytes (82.2%)[0m
+[0;32mI (2610561) FLASH_CMD: base mem address = 0x0800d000[0m
+[0;32mI (2610561) FLASH_CMD: bytes_so_far_sent:20480 -- bytes_remaining:4420[0m
+[0;32mI (2610591) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16785[0m
+[0;32mI (2610691) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610691) FLASH_CMD: Flash progress: 20608/24900 bytes (82.8%)[0m
+[0;32mI (2610691) FLASH_CMD: base mem address = 0x0800d080[0m
+[0;32mI (2610691) FLASH_CMD: bytes_so_far_sent:20608 -- bytes_remaining:4292[0m
+[0;32mI (2610721) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=54882[0m
+[0;32mI (2610821) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610821) FLASH_CMD: Flash progress: 20736/24900 bytes (83.3%)[0m
+[0;32mI (2610821) FLASH_CMD: base mem address = 0x0800d100[0m
+[0;32mI (2610821) FLASH_CMD: bytes_so_far_sent:20736 -- bytes_remaining:4164[0m
+[0;32mI (2610861) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=1737[0m
+[0;32mI (2610951) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2610951) FLASH_CMD: Flash progress: 20864/24900 bytes (83.8%)[0m
+[0;32mI (2610951) FLASH_CMD: base mem address = 0x0800d180[0m
+[0;32mI (2610951) FLASH_CMD: bytes_so_far_sent:20864 -- bytes_remaining:4036[0m
+[0;32mI (2611001) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=23924[0m
+[0;32mI (2611081) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611081) FLASH_CMD: Flash progress: 20992/24900 bytes (84.3%)[0m
+[0;32mI (2611081) FLASH_CMD: base mem address = 0x0800d200[0m
+[0;32mI (2611081) FLASH_CMD: bytes_so_far_sent:20992 -- bytes_remaining:3908[0m
+[0;32mI (2611121) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=17156[0m
+[0;32mI (2611211) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611211) FLASH_CMD: Flash progress: 21120/24900 bytes (84.8%)[0m
+[0;32mI (2611211) FLASH_CMD: base mem address = 0x0800d280[0m
+[0;32mI (2611211) FLASH_CMD: bytes_so_far_sent:21120 -- bytes_remaining:3780[0m
+[0;32mI (2611251) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=41482[0m
+[0;32mI (2611341) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611341) FLASH_CMD: Flash progress: 21248/24900 bytes (85.3%)[0m
+[0;32mI (2611341) FLASH_CMD: base mem address = 0x0800d300[0m
+[0;32mI (2611341) FLASH_CMD: bytes_so_far_sent:21248 -- bytes_remaining:3652[0m
+[0;32mI (2611381) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=31732[0m
+[0;32mI (2611471) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611471) FLASH_CMD: Flash progress: 21376/24900 bytes (85.8%)[0m
+[0;32mI (2611471) FLASH_CMD: base mem address = 0x0800d380[0m
+[0;32mI (2611471) FLASH_CMD: bytes_so_far_sent:21376 -- bytes_remaining:3524[0m
+[0;32mI (2611511) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=16821[0m
+[0;32mI (2611601) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611601) FLASH_CMD: Flash progress: 21504/24900 bytes (86.4%)[0m
+[0;32mI (2611601) FLASH_CMD: base mem address = 0x0800d400[0m
+[0;32mI (2611601) FLASH_CMD: bytes_so_far_sent:21504 -- bytes_remaining:3396[0m
+[0;32mI (2611641) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=21860[0m
+[0;32mI (2611731) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611731) FLASH_CMD: Flash progress: 21632/24900 bytes (86.9%)[0m
+[0;32mI (2611731) FLASH_CMD: base mem address = 0x0800d480[0m
+[0;32mI (2611731) FLASH_CMD: bytes_so_far_sent:21632 -- bytes_remaining:3268[0m
+[0;32mI (2611771) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=65292[0m
+[0;32mI (2611861) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611861) FLASH_CMD: Flash progress: 21760/24900 bytes (87.4%)[0m
+[0;32mI (2611861) FLASH_CMD: base mem address = 0x0800d500[0m
+[0;32mI (2611861) FLASH_CMD: bytes_so_far_sent:21760 -- bytes_remaining:3140[0m
+[0;32mI (2611901) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=65355[0m
+[0;32mI (2611991) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2611991) FLASH_CMD: Flash progress: 21888/24900 bytes (87.9%)[0m
+[0;32mI (2611991) FLASH_CMD: base mem address = 0x0800d580[0m
+[0;32mI (2611991) FLASH_CMD: bytes_so_far_sent:21888 -- bytes_remaining:3012[0m
+[0;32mI (2612041) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=13011[0m
+[0;32mI (2612121) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612121) FLASH_CMD: Flash progress: 22016/24900 bytes (88.4%)[0m
+[0;32mI (2612121) FLASH_CMD: base mem address = 0x0800d600[0m
+[0;32mI (2612121) FLASH_CMD: bytes_so_far_sent:22016 -- bytes_remaining:2884[0m
+[0;32mI (2612151) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=20648[0m
+[0;32mI (2612261) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612261) FLASH_CMD: Flash progress: 22144/24900 bytes (88.9%)[0m
+[0;32mI (2612261) FLASH_CMD: base mem address = 0x0800d680[0m
+[0;32mI (2612261) FLASH_CMD: bytes_so_far_sent:22144 -- bytes_remaining:2756[0m
+[0;32mI (2612301) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=52909[0m
+[0;32mI (2612391) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612391) FLASH_CMD: Flash progress: 22272/24900 bytes (89.4%)[0m
+[0;32mI (2612391) FLASH_CMD: base mem address = 0x0800d700[0m
+[0;32mI (2612391) FLASH_CMD: bytes_so_far_sent:22272 -- bytes_remaining:2628[0m
+[0;32mI (2612431) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=49799[0m
+[0;32mI (2612521) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612521) FLASH_CMD: Flash progress: 22400/24900 bytes (90.0%)[0m
+[0;32mI (2612521) FLASH_CMD: base mem address = 0x0800d780[0m
+[0;32mI (2612521) FLASH_CMD: bytes_so_far_sent:22400 -- bytes_remaining:2500[0m
+[0;32mI (2612561) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34885[0m
+[0;32mI (2612651) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612651) FLASH_CMD: Flash progress: 22528/24900 bytes (90.5%)[0m
+[0;32mI (2612651) FLASH_CMD: base mem address = 0x0800d800[0m
+[0;32mI (2612651) FLASH_CMD: bytes_so_far_sent:22528 -- bytes_remaining:2372[0m
+[0;32mI (2612691) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=41319[0m
+[0;32mI (2612781) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612781) FLASH_CMD: Flash progress: 22656/24900 bytes (91.0%)[0m
+[0;32mI (2612781) FLASH_CMD: base mem address = 0x0800d880[0m
+[0;32mI (2612781) FLASH_CMD: bytes_so_far_sent:22656 -- bytes_remaining:2244[0m
+[0;32mI (2612811) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=2631[0m
+[0;32mI (2612921) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2612921) FLASH_CMD: Flash progress: 22784/24900 bytes (91.5%)[0m
+[0;32mI (2612921) FLASH_CMD: base mem address = 0x0800d900[0m
+[0;32mI (2612921) FLASH_CMD: bytes_so_far_sent:22784 -- bytes_remaining:2116[0m
+[0;32mI (2612961) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=63745[0m
+[0;32mI (2613051) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613051) FLASH_CMD: Flash progress: 22912/24900 bytes (92.0%)[0m
+[0;32mI (2613051) FLASH_CMD: base mem address = 0x0800d980[0m
+[0;32mI (2613051) FLASH_CMD: bytes_so_far_sent:22912 -- bytes_remaining:1988[0m
+[0;32mI (2613101) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=9942[0m
+[0;32mI (2613181) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613181) FLASH_CMD: Flash progress: 23040/24900 bytes (92.5%)[0m
+[0;32mI (2613181) FLASH_CMD: base mem address = 0x0800da00[0m
+[0;32mI (2613181) FLASH_CMD: bytes_so_far_sent:23040 -- bytes_remaining:1860[0m
+[0;32mI (2613221) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=24887[0m
+[0;32mI (2613311) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613311) FLASH_CMD: Flash progress: 23168/24900 bytes (93.0%)[0m
+[0;32mI (2613311) FLASH_CMD: base mem address = 0x0800da80[0m
+[0;32mI (2613311) FLASH_CMD: bytes_so_far_sent:23168 -- bytes_remaining:1732[0m
+[0;32mI (2613351) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10465[0m
+[0;32mI (2613441) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613441) FLASH_CMD: Flash progress: 23296/24900 bytes (93.6%)[0m
+[0;32mI (2613441) FLASH_CMD: base mem address = 0x0800db00[0m
+[0;32mI (2613441) FLASH_CMD: bytes_so_far_sent:23296 -- bytes_remaining:1604[0m
+[0;32mI (2613481) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=35171[0m
+[0;32mI (2613571) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613571) FLASH_CMD: Flash progress: 23424/24900 bytes (94.1%)[0m
+[0;32mI (2613571) FLASH_CMD: base mem address = 0x0800db80[0m
+[0;32mI (2613571) FLASH_CMD: bytes_so_far_sent:23424 -- bytes_remaining:1476[0m
+[0;32mI (2613601) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=30632[0m
+[0;32mI (2613701) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613701) FLASH_CMD: Flash progress: 23552/24900 bytes (94.6%)[0m
+[0;32mI (2613701) FLASH_CMD: base mem address = 0x0800dc00[0m
+[0;32mI (2613701) FLASH_CMD: bytes_so_far_sent:23552 -- bytes_remaining:1348[0m
+[0;32mI (2613741) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=47360[0m
+[0;32mI (2613831) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613831) FLASH_CMD: Flash progress: 23680/24900 bytes (95.1%)[0m
+[0;32mI (2613831) FLASH_CMD: base mem address = 0x0800dc80[0m
+[0;32mI (2613831) FLASH_CMD: bytes_so_far_sent:23680 -- bytes_remaining:1220[0m
+[0;32mI (2613871) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=57257[0m
+[0;32mI (2613961) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2613961) FLASH_CMD: Flash progress: 23808/24900 bytes (95.6%)[0m
+[0;32mI (2613961) FLASH_CMD: base mem address = 0x0800dd00[0m
+[0;32mI (2613961) FLASH_CMD: bytes_so_far_sent:23808 -- bytes_remaining:1092[0m
+[0;32mI (2614001) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=42684[0m
+[0;32mI (2614091) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614091) FLASH_CMD: Flash progress: 23936/24900 bytes (96.1%)[0m
+[0;32mI (2614091) FLASH_CMD: base mem address = 0x0800dd80[0m
+[0;32mI (2614091) FLASH_CMD: bytes_so_far_sent:23936 -- bytes_remaining:964[0m
+[0;32mI (2614131) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=18471[0m
+[0;32mI (2614221) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614221) FLASH_CMD: Flash progress: 24064/24900 bytes (96.6%)[0m
+[0;32mI (2614221) FLASH_CMD: base mem address = 0x0800de00[0m
+[0;32mI (2614221) FLASH_CMD: bytes_so_far_sent:24064 -- bytes_remaining:836[0m
+[0;32mI (2614261) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=45934[0m
+[0;32mI (2614351) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614351) FLASH_CMD: Flash progress: 24192/24900 bytes (97.2%)[0m
+[0;32mI (2614351) FLASH_CMD: base mem address = 0x0800de80[0m
+[0;32mI (2614351) FLASH_CMD: bytes_so_far_sent:24192 -- bytes_remaining:708[0m
+[0;32mI (2614391) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=58923[0m
+[0;32mI (2614481) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614481) FLASH_CMD: Flash progress: 24320/24900 bytes (97.7%)[0m
+[0;32mI (2614481) FLASH_CMD: base mem address = 0x0800df00[0m
+[0;32mI (2614481) FLASH_CMD: bytes_so_far_sent:24320 -- bytes_remaining:580[0m
+[0;32mI (2614521) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=57250[0m
+[0;32mI (2614611) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614611) FLASH_CMD: Flash progress: 24448/24900 bytes (98.2%)[0m
+[0;32mI (2614611) FLASH_CMD: base mem address = 0x0800df80[0m
+[0;32mI (2614611) FLASH_CMD: bytes_so_far_sent:24448 -- bytes_remaining:452[0m
+[0;32mI (2614651) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=64709[0m
+[0;32mI (2614741) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614741) FLASH_CMD: Flash progress: 24576/24900 bytes (98.7%)[0m
+[0;32mI (2614741) FLASH_CMD: base mem address = 0x0800e000[0m
+[0;32mI (2614741) FLASH_CMD: bytes_so_far_sent:24576 -- bytes_remaining:324[0m
+[0;32mI (2614781) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=55642[0m
+[0;32mI (2614871) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2614871) FLASH_CMD: Flash progress: 24704/24900 bytes (99.2%)[0m
+[0;32mI (2614871) FLASH_CMD: base mem address = 0x0800e080[0m
+[0;32mI (2614871) FLASH_CMD: bytes_so_far_sent:24704 -- bytes_remaining:196[0m
+[0;32mI (2614911) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=34924[0m
+[0;32mI (2615001) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2615001) FLASH_CMD: Flash progress: 24832/24900 bytes (99.7%)[0m
+[0;32mI (2615001) FLASH_CMD: base mem address = 0x0800e100[0m
+[0;32mI (2615001) FLASH_CMD: bytes_so_far_sent:24832 -- bytes_remaining:68[0m
+[0;32mI (2615031) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=21703[0m
+[0;32mI (2615131) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2615131) FLASH_CMD: Flash progress: 24900/24900 bytes (100.0%)[0m
+[0;32mI (2615131) FLASH_CMD: Step 5: Firmware write completed, sending GO command[0m
+[0;32mI (2615141) FLASH_CMD: Command ==> BL_GO_TO_ADDR[0m
+[0;32mI (2615161) UART_CONFIG: CRC: SUCCESS Len: 1[0m
+[0;32mI (2615171) FLASH_CMD: Address Status: 0x00[0m
+[0;32mI (2615171) FLASH_CMD: STM32 firmware update completed successfully![0m
+[0;32mI (2615171) OTA_UPDATE: Firmware update completed successfully[0m
+[0;32mI (2615181) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=42611[0m
+[0;32mI (2615211) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=54632[0m
+[0;32mI (2615211) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=10331[0m
+[0;32mI (2615251) MQTT_HANDLER: MQTT_EVENT_PUBLISHED, msg_id=43130[0m
