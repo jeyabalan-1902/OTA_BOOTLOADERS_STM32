@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bootloader.h"
@@ -65,36 +64,27 @@ void bootloader_main(void)
 {
 	if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_RESET)
 	{
-		C_UART = &huart1;
-		printf("button pressed...entering the bootloader mode\n");
+		debug_puts("button pressed...entering the bootloader mode");
 		bootloader_uart_read_data();
 	}
 	else
 	{
 		uint8_t rx_byte = 0;
 		HAL_StatusTypeDef status;
-		// Wait for 1 byte for up to 3 seconds
 		status = HAL_UART_Receive(&huart1, &rx_byte, 1, UART_TIMEOUT_MS);
 		if (status == HAL_OK && rx_byte == BOOT_CMD)
 		{
-			C_UART = &huart1;
-			printf("BOOT_CMD (0x50) received...entering bootloader mode\n\r");
+			debug_puts("BOOT_CMD received: Entering bootloader mode");
 			bootloader_uart_read_data();
 		}
 		else
 		{
-			printf("No valid BOOT_CMD received...jumping to application\n\r");
+			debug_puts("No BOOT_CMD: Jumping to application");
 			bootloader_jump_to_user_app();
 		}
 	}
 }
 
-#define PRINTF   int __io_putchar(int ch)
-PRINTF
-{
-	HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
-	return ch;
-}
 /* USER CODE END 0 */
 
 /**
@@ -130,7 +120,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  printf("bootloader running....\n");
+  debug_puts("Bootloader running...");
   bootloader_main();
   /* USER CODE END 2 */
 

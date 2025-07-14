@@ -1,9 +1,8 @@
-../Core/Src/main.c:64:6:bootloader_main	24	static
-../Core/Src/main.c:93:1:__io_putchar	16	static
-../Core/Src/main.c:104:5:main	8	static
-../Core/Src/main.c:152:6:SystemClock_Config	136	static
-../Core/Src/main.c:204:13:MX_CRC_Init	8	static
-../Core/Src/main.c:235:13:MX_USART1_UART_Init	8	static
-../Core/Src/main.c:270:13:MX_USART2_UART_Init	8	static
-../Core/Src/main.c:305:13:MX_GPIO_Init	48	static
-../Core/Src/main.c:343:6:Error_Handler	8	static,ignoring_inline_asm
+../Core/Src/main.c:63:6:bootloader_main	24	static
+../Core/Src/main.c:94:5:main	8	static
+../Core/Src/main.c:142:6:SystemClock_Config	136	static
+../Core/Src/main.c:194:13:MX_CRC_Init	8	static
+../Core/Src/main.c:225:13:MX_USART1_UART_Init	8	static
+../Core/Src/main.c:260:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:295:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:333:6:Error_Handler	8	static,ignoring_inline_asm
